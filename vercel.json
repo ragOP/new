@@ -1,0 +1,6 @@
+{
+ "rewrites": [
+   { "source": "/smw1", "destination": "/new.html" }
+
+ ]
+}
