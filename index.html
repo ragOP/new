@@ -1,0 +1,798 @@
+<!-- DEBUG-VIEW START 1 APPPATH/Views/bestsmartwatchinindia.com/lp/intl-v1/index.php --><!DOCTYPE html><html lang="en"><head>
+<script async="" src="js/fbevents.js"></script><script id="debugbar_loader" data-time="1713814122.796987" src="http://localhost:8080/index.php?debugbar"></script><script id="debugbar_dynamic_script"></script><style id="debugbar_dynamic_style"></style><script class="kint-rich-script">void 0===window.kintShared&&(window.kintShared=function(){"use strict";var e={dedupe:function(e,n){return[].forEach.call(document.querySelectorAll(e),function(e){e!==(n=n&&n.ownerDocument.contains(n)?n:e)&&e.parentNode.removeChild(e)}),n},runOnce:function(e){"complete"===document.readyState?e():window.addEventListener("load",e)}};return window.addEventListener("click",function(e){var n;e.target.classList.contains("kint-ide-link")&&((n=new XMLHttpRequest).open("GET",e.target.href),n.send(null),e.preventDefault())}),e}());
+void 0===window.kintRich&&(window.kintRich=function(){"use strict";var l={selectText:function(e){var t=window.getSelection(),a=document.createRange();a.selectNodeContents(e),t.removeAllRanges(),t.addRange(a)},toggle:function(e,t){var a=l.getChildren(e);a&&(e.classList.toggle("kint-show",t),1===a.childNodes.length)&&(a=a.childNodes[0].childNodes[0])&&a.classList&&a.classList.contains("kint-parent")&&l.toggle(a,t)},toggleChildren:function(e,t){var a=l.getChildren(e);if(a){var o=a.getElementsByClassName("kint-parent"),s=o.length;for(void 0===t&&(t=e.classList.contains("kint-show"));s--;)l.toggle(o[s],t)}},switchTab:function(e){var t=e.previousSibling,a=0;for(e.parentNode.getElementsByClassName("kint-active-tab")[0].classList.remove("kint-active-tab"),e.classList.add("kint-active-tab");t;)1===t.nodeType&&a++,t=t.previousSibling;for(var o=e.parentNode.nextSibling.childNodes,s=0;s<o.length;s++)s===a?(o[s].classList.add("kint-show"),1===o[s].childNodes.length&&(t=o[s].childNodes[0].childNodes[0])&&t.classList&&t.classList.contains("kint-parent")&&l.toggle(t,!0)):o[s].classList.remove("kint-show")},mktag:function(e){return"<"+e+">"},openInNewWindow:function(e){var t=window.open();t&&(t.document.open(),t.document.write(l.mktag("html")+l.mktag("head")+l.mktag("title")+"Kint ("+(new Date).toISOString()+")"+l.mktag("/title")+l.mktag('meta charset="utf-8"')+l.mktag('script class="kint-rich-script" nonce="'+l.script.nonce+'"')+l.script.innerHTML+l.mktag("/script")+l.mktag('style class="kint-rich-style" nonce="'+l.style.nonce+'"')+l.style.innerHTML+l.mktag("/style")+l.mktag("/head")+l.mktag("body")+'<input class="kint-note-input" placeholder="Take some notes!"><div class="kint-rich">'+e.parentNode.outerHTML+"</div>"+l.mktag("/body")),t.document.close())},sortTable:function(e,a){var t=e.tBodies[0];[].slice.call(e.tBodies[0].rows).sort(function(e,t){if(e=e.cells[a].textContent.trim().toLocaleLowerCase(),t=t.cells[a].textContent.trim().toLocaleLowerCase(),isNaN(e)||isNaN(t)){if(isNaN(e)&&!isNaN(t))return 1;if(isNaN(t)&&!isNaN(e))return-1}else e=parseFloat(e),t=parseFloat(t);return e<t?-1:t<e?1:0}).forEach(function(e){t.appendChild(e)})},showAccessPath:function(e){for(var t=e.childNodes,a=0;a<t.length;a++)if(t[a].classList&&t[a].classList.contains("access-path"))return t[a].classList.toggle("kint-show"),void(t[a].classList.contains("kint-show")&&l.selectText(t[a]))},showSearchBox:function(e){var t=e.querySelector(".kint-search");t&&(t.classList.toggle("kint-show"),t.classList.contains("kint-show")?(e.classList.add("kint-show"),t.focus(),t.select(),l.search(e.parentNode,t.value)):e.parentNode.classList.remove("kint-search-root"))},search:function(e,t){e.querySelectorAll(".kint-search-match").forEach(function(e){e.classList.remove("kint-search-match")}),e.classList.remove("kint-search-match"),e.classList.toggle("kint-search-root",t.length),t.length&&l.findMatches(e,t)},findMatches:function(e,t){var a,o,s,n=e.cloneNode(!0);if(n.querySelectorAll(".access-path").forEach(function(e){e.remove()}),-1!=n.textContent.toUpperCase().indexOf(t.toUpperCase())){for(r in e.classList.add("kint-search-match"),e.childNodes)if("DD"==e.childNodes[r].tagName){a=e.childNodes[r];break}if(a)if([].forEach.call(a.childNodes,function(e){"DL"==e.tagName?l.findMatches(e,t):"UL"==e.tagName&&(e.classList.contains("kint-tabs")?o=e.childNodes:e.classList.contains("kint-tab-contents")&&(s=e.childNodes))}),o&&s&&o.length==s.length)for(var r=0;r<o.length;r++){var i=!1;(i=-1!=o[r].textContent.toUpperCase().indexOf(t.toUpperCase())||((n=s[r].cloneNode(!0)).querySelectorAll(".access-path").forEach(function(e){e.remove()}),-1!=n.textContent.toUpperCase().indexOf(t.toUpperCase()))?!0:i)&&(o[r].classList.add("kint-search-match"),[].forEach.call(s[r].childNodes,function(e){"DL"==e.tagName&&l.findMatches(e,t)}))}}},getParentByClass:function(e,t){for(;;){if(!(e=e.parentNode)||!e.classList||e===document)return null;if(e.classList.contains(t))return e}return null},getParentHeader:function(e,t){for(var a=e.nodeName.toLowerCase();"dd"!==a&&"dt"!==a&&l.getParentByClass(e,"kint-rich");)a=(e=e.parentNode).nodeName.toLowerCase();return l.getParentByClass(e,"kint-rich")?(e="dd"===a&&t?e.previousElementSibling:e)&&"dt"===e.nodeName.toLowerCase()&&e.classList.contains("kint-parent")?e:void 0:null},getChildren:function(e){for(;(e=e.nextElementSibling)&&"dd"!==e.nodeName.toLowerCase(););return e},isFolderOpen:function(){if(l.folder&&l.folder.querySelector("dd.kint-foldout"))return l.folder.querySelector("dd.kint-foldout").previousSibling.classList.contains("kint-show")},initLoad:function(){l.style=window.kintShared.dedupe("style.kint-rich-style",l.style),l.script=window.kintShared.dedupe("script.kint-rich-script",l.script),l.folder=window.kintShared.dedupe(".kint-rich.kint-folder",l.folder);var t,e=document.querySelectorAll("input.kint-search");[].forEach.call(e,function(t){function e(e){window.clearTimeout(a),t.value!==o&&(a=window.setTimeout(function(){o=t.value,l.search(t.parentNode.parentNode,o)},500))}var a=null,o=null;t.removeEventListener("keyup",e),t.addEventListener("keyup",e)}),l.folder&&(t=l.folder.querySelector("dd"),[].forEach.call(document.querySelectorAll(".kint-rich.kint-file"),function(e){e.parentNode!==l.folder&&t.appendChild(e)}),document.body.appendChild(l.folder),l.folder.classList.add("kint-show"))},keyboardNav:{targets:[],target:0,active:!1,fetchTargets:function(){var e=l.keyboardNav.targets[l.keyboardNav.target];l.keyboardNav.targets=[],document.querySelectorAll(".kint-rich nav, .kint-tabs>li:not(.kint-active-tab)").forEach(function(e){l.isFolderOpen()&&!l.folder.contains(e)||0===e.offsetWidth&&0===e.offsetHeight||l.keyboardNav.targets.push(e)}),e&&-1!==l.keyboardNav.targets.indexOf(e)&&(l.keyboardNav.target=l.keyboardNav.targets.indexOf(e))},sync:function(e){var t=document.querySelector(".kint-focused");t&&t.classList.remove("kint-focused"),l.keyboardNav.active&&((t=l.keyboardNav.targets[l.keyboardNav.target]).classList.add("kint-focused"),e||l.keyboardNav.scroll(t))},scroll:function(e){var t,a;l.folder&&e===l.folder.querySelector("dt > nav")||(e=(t=function(e){return e.offsetTop+(e.offsetParent?t(e.offsetParent):0)})(e),l.isFolderOpen()?(a=l.folder.querySelector("dd.kint-foldout")).scrollTo(0,e-a.clientHeight/2):window.scrollTo(0,e-window.innerHeight/2))},moveCursor:function(e){for(l.keyboardNav.target+=e;l.keyboardNav.target<0;)l.keyboardNav.target+=l.keyboardNav.targets.length;for(;l.keyboardNav.target>=l.keyboardNav.targets.length;)l.keyboardNav.target-=l.keyboardNav.targets.length;l.keyboardNav.sync()},setCursor:function(e){if(!l.isFolderOpen()||l.folder.contains(e)){l.keyboardNav.fetchTargets();for(var t=0;t<l.keyboardNav.targets.length;t++)if(e===l.keyboardNav.targets[t])return l.keyboardNav.target=t,!0}return!1}},mouseNav:{lastClickTarget:null,lastClickTimer:null,lastClickCount:0,renewLastClick:function(){window.clearTimeout(l.mouseNav.lastClickTimer),l.mouseNav.lastClickTimer=window.setTimeout(function(){l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickTimer=null,l.mouseNav.lastClickCount=0},250)}},style:null,script:null,folder:null};return window.addEventListener("click",function(e){var t=e.target;if(l.mouseNav.lastClickTarget&&l.mouseNav.lastClickTimer&&l.mouseNav.lastClickCount)if(t=l.mouseNav.lastClickTarget,1===l.mouseNav.lastClickCount)l.toggleChildren(t.parentNode),l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),l.mouseNav.lastClickCount++,l.mouseNav.renewLastClick();else{for(var a=t.parentNode.classList.contains("kint-show"),o=document.getElementsByClassName("kint-parent"),s=o.length;s--;)l.toggle(o[s],a);l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),l.keyboardNav.scroll(t),window.clearTimeout(l.mouseNav.lastClickTimer),l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickCount=0}else if(l.getParentByClass(t,"kint-rich")){var n=t.nodeName.toLowerCase();if("dfn"===n&&l.selectText(t),"th"===n)e.ctrlKey||l.sortTable(t.parentNode.parentNode.parentNode,t.cellIndex);else if((t=l.getParentHeader(t))&&(l.keyboardNav.setCursor(t.querySelector("nav")),l.keyboardNav.sync(!0)),t=e.target,"li"===n&&"kint-tabs"===t.parentNode.className)"kint-active-tab"!==t.className&&l.switchTab(t),(t=l.getParentHeader(t,!0))&&(l.keyboardNav.setCursor(t.querySelector("nav")),l.keyboardNav.sync(!0));else if("nav"===n)"footer"===t.parentNode.nodeName.toLowerCase()?(l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),(t=t.parentNode).classList.toggle("kint-show")):(l.toggle(t.parentNode),l.keyboardNav.fetchTargets(),l.mouseNav.lastClickCount=1,l.mouseNav.lastClickTarget=t,l.mouseNav.renewLastClick());else if(t.classList.contains("kint-popup-trigger")){var r=t.parentNode;if("footer"===r.nodeName.toLowerCase())r=r.previousSibling;else for(;r&&!r.classList.contains("kint-parent");)r=r.parentNode;l.openInNewWindow(r)}else t.classList.contains("kint-access-path-trigger")?l.showAccessPath(t.parentNode):t.classList.contains("kint-search-trigger")?l.showSearchBox(t.parentNode):t.classList.contains("kint-search")||("pre"===n&&3===e.detail?l.selectText(t):l.getParentByClass(t,"kint-source")&&3===e.detail?l.selectText(l.getParentByClass(t,"kint-source")):t.classList.contains("access-path")?l.selectText(t):"a"!==n&&(t=l.getParentHeader(t))&&(l.toggle(t),l.keyboardNav.fetchTargets()))}},!0),window.addEventListener("keydown",function(e){if(e.target===document.body&&!e.altKey&&!e.ctrlKey)if(68===e.keyCode){if(l.keyboardNav.active)l.keyboardNav.active=!1;else if(l.keyboardNav.active=!0,l.keyboardNav.fetchTargets(),0===l.keyboardNav.targets.length)return void(l.keyboardNav.active=!1);l.keyboardNav.sync(),e.preventDefault()}else if(l.keyboardNav.active)if(9===e.keyCode)l.keyboardNav.moveCursor(e.shiftKey?-1:1),e.preventDefault();else if(38===e.keyCode||75===e.keyCode)l.keyboardNav.moveCursor(-1),e.preventDefault();else if(40===e.keyCode||74===e.keyCode)l.keyboardNav.moveCursor(1),e.preventDefault();else{var t,a,o=l.keyboardNav.targets[l.keyboardNav.target];if("li"===o.nodeName.toLowerCase()){if(32===e.keyCode||13===e.keyCode)return l.switchTab(o),l.keyboardNav.fetchTargets(),l.keyboardNav.sync(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode)return l.keyboardNav.moveCursor(1),void e.preventDefault();if(37===e.keyCode||72===e.keyCode)return l.keyboardNav.moveCursor(-1),void e.preventDefault()}o=o.parentNode,65===e.keyCode?(l.showAccessPath(o),e.preventDefault()):"footer"===o.nodeName.toLowerCase()&&o.parentNode.classList.contains("kint-rich")?32===e.keyCode||13===e.keyCode?(o.classList.toggle("kint-show"),e.preventDefault()):37===e.keyCode||72===e.keyCode?(o.classList.remove("kint-show"),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode||(o.classList.add("kint-show"),e.preventDefault()):32===e.keyCode||13===e.keyCode?(l.toggle(o),l.keyboardNav.fetchTargets(),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode&&37!==e.keyCode&&72!==e.keyCode||(t=39===e.keyCode||76===e.keyCode,o.classList.contains("kint-show")?l.toggleChildren(o,t):t||(a=l.getParentHeader(o.parentNode.parentNode,!0))&&(l.keyboardNav.setCursor((o=a).querySelector("nav")),l.keyboardNav.sync()),l.toggle(o,t),l.keyboardNav.fetchTargets(),e.preventDefault())}},!0),l}()),window.kintShared.runOnce(window.kintRich.initLoad);
+void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,window.addEventListener("load",function(){"use strict";var a={},t=Array.prototype.slice.call(document.querySelectorAll("[data-kint-microtime-group]"),0);t.forEach(function(t){var i,e;t.querySelector(".kint-microtime-lap")&&(i=t.getAttribute("data-kint-microtime-group"),e=parseFloat(t.querySelector(".kint-microtime-lap").innerHTML),t=parseFloat(t.querySelector(".kint-microtime-avg").innerHTML),void 0===a[i]&&(a[i]={}),(void 0===a[i].min||a[i].min>e)&&(a[i].min=e),(void 0===a[i].max||a[i].max<e)&&(a[i].max=e),a[i].avg=t)}),t.forEach(function(t){var i,e,r,o,n=t.querySelector(".kint-microtime-lap");null!==n&&(i=parseFloat(n.textContent),o=t.dataset.kintMicrotimeGroup,e=a[o].avg,r=a[o].max,o=a[o].min,i!==(t.querySelector(".kint-microtime-avg").textContent=e)||i!==o||i!==r)&&(n.style.background=e<i?"hsl("+(40-40*((i-e)/(r-e)))+", 100%, 65%)":"hsl("+(40+80*(e===o?0:(e-i)/(e-o)))+", 100%, 65%)")})}));
+</script><style class="kint-rich-style">.kint-rich{font-size:13px;overflow-x:auto;white-space:nowrap;background:rgba(255,255,255,.9)}.kint-rich.kint-folder{position:fixed;bottom:0;left:0;right:0;z-index:999999;width:100%;margin:0;display:block}.kint-rich.kint-folder dd.kint-foldout{max-height:calc(100vh - 100px);padding-right:8px;overflow-y:scroll;display:none}.kint-rich.kint-folder dd.kint-foldout.kint-show{display:block}.kint-rich::selection,.kint-rich::-moz-selection,.kint-rich::-webkit-selection{background:#aaa;color:#1d1e1e}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich,.kint-rich::before,.kint-rich::after,.kint-rich *,.kint-rich *::before,.kint-rich *::after{box-sizing:border-box;border-radius:0;color:#1d1e1e;float:none !important;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;line-height:15px;margin:0;padding:0;text-align:left}.kint-rich{margin:8px 0}.kint-rich dt,.kint-rich dl{width:auto}.kint-rich dt,.kint-rich div.access-path{background:#f8f8f8;border:1px solid #d7d7d7;color:#1d1e1e;display:block;font-weight:bold;list-style:none outside none;overflow:auto;padding:4px}.kint-rich dt:hover,.kint-rich div.access-path:hover{border-color:#aaa}.kint-rich>dl dl{padding:0 0 0 12px}.kint-rich dt.kint-parent>nav,.kint-rich>footer>nav{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNTAiPjxwYXRoIGQ9Ik02IDdoMThsLTkgMTV6bTAgMzBoMThsLTkgMTV6bTAgNDVoMThsLTktMTV6bTAgMzBoMThsLTktMTV6bTAgMTJsMTggMThtLTE4IDBsMTgtMTgiIGZpbGw9IiM1NTUiLz48cGF0aCBkPSJNNiAxMjZsMTggMThtLTE4IDBsMTgtMTgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjNTU1Ii8+PC9zdmc+") no-repeat scroll 0 0/15px 75px rgba(0,0,0,0);cursor:pointer;display:inline-block;height:15px;width:15px;margin-right:3px;vertical-align:middle}.kint-rich dt.kint-parent:hover>nav,.kint-rich>footer>nav:hover{background-position:0 25%}.kint-rich dt.kint-parent.kint-show>nav,.kint-rich>footer.kint-show>nav{background-position:0 50%}.kint-rich dt.kint-parent.kint-show:hover>nav,.kint-rich>footer.kint-show>nav:hover{background-position:0 75%}.kint-rich dt.kint-parent.kint-locked>nav{background-position:0 100%}.kint-rich dt.kint-parent+dd{display:none;border-left:1px dashed #d7d7d7}.kint-rich dt.kint-parent.kint-show+dd{display:block}.kint-rich var,.kint-rich var a{color:#06f;font-style:normal}.kint-rich dt:hover var,.kint-rich dt:hover var a{color:red}.kint-rich dfn{font-style:normal;font-family:monospace;color:#1d1e1e}.kint-rich pre{color:#1d1e1e;margin:0 0 0 12px;padding:5px;overflow-y:hidden;border-top:0;border:1px solid #d7d7d7;background:#f8f8f8;display:block;word-break:normal}.kint-rich .kint-popup-trigger,.kint-rich .kint-access-path-trigger,.kint-rich .kint-search-trigger{background:rgba(29,30,30,.8);border-radius:3px;height:16px;font-size:16px;margin-left:5px;font-weight:bold;width:16px;text-align:center;float:right !important;cursor:pointer;color:#f8f8f8;position:relative;overflow:hidden;line-height:17.6px}.kint-rich .kint-popup-trigger:hover,.kint-rich .kint-access-path-trigger:hover,.kint-rich .kint-search-trigger:hover{color:#1d1e1e;background:#f8f8f8}.kint-rich dt.kint-parent>.kint-popup-trigger{line-height:19.2px}.kint-rich .kint-search-trigger{font-size:20px}.kint-rich input.kint-search{display:none;border:1px solid #d7d7d7;border-top-width:0;border-bottom-width:0;padding:4px;float:right !important;margin:-4px 0;color:#1d1e1e;background:#f8f8f8;height:24px;width:160px;position:relative;z-index:100}.kint-rich input.kint-search.kint-show{display:block}.kint-rich .kint-search-root ul.kint-tabs>li:not(.kint-search-match){background:#f8f8f8;opacity:.5}.kint-rich .kint-search-root dl:not(.kint-search-match){opacity:.5}.kint-rich .kint-search-root dl:not(.kint-search-match)>dt{background:#f8f8f8}.kint-rich .kint-search-root dl:not(.kint-search-match) dl,.kint-rich .kint-search-root dl:not(.kint-search-match) ul.kint-tabs>li:not(.kint-search-match){opacity:1}.kint-rich div.access-path{background:#f8f8f8;display:none;margin-top:5px;padding:4px;white-space:pre}.kint-rich div.access-path.kint-show{display:block}.kint-rich footer{padding:0 3px 3px;font-size:9px;background:rgba(0,0,0,0)}.kint-rich footer>.kint-popup-trigger{background:rgba(0,0,0,0);color:#1d1e1e}.kint-rich footer nav{height:10px;width:10px;background-size:10px 50px}.kint-rich footer>ol{display:none;margin-left:32px}.kint-rich footer.kint-show>ol{display:block}.kint-rich a{color:#1d1e1e;text-shadow:none;text-decoration:underline}.kint-rich a:hover{color:#1d1e1e;border-bottom:1px dotted #1d1e1e}.kint-rich ul{list-style:none;padding-left:12px}.kint-rich ul:not(.kint-tabs) li{border-left:1px dashed #d7d7d7}.kint-rich ul:not(.kint-tabs) li>dl{border-left:none}.kint-rich ul.kint-tabs{margin:0 0 0 12px;padding-left:0;background:#f8f8f8;border:1px solid #d7d7d7;border-top:0}.kint-rich ul.kint-tabs>li{background:#f8f8f8;border:1px solid #d7d7d7;cursor:pointer;display:inline-block;height:24px;margin:2px;padding:0 12px;vertical-align:top}.kint-rich ul.kint-tabs>li:hover,.kint-rich ul.kint-tabs>li.kint-active-tab:hover{border-color:#aaa;color:red}.kint-rich ul.kint-tabs>li.kint-active-tab{background:#f8f8f8;border-top:0;margin-top:-1px;height:27px;line-height:24px}.kint-rich ul.kint-tabs>li:not(.kint-active-tab){line-height:20px}.kint-rich ul.kint-tabs li+li{margin-left:0}.kint-rich ul.kint-tab-contents>li{display:none}.kint-rich ul.kint-tab-contents>li.kint-show{display:block}.kint-rich dt:hover+dd>ul>li.kint-active-tab{border-color:#aaa;color:red}.kint-rich dt>.kint-color-preview{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:10px;border:1px solid #d7d7d7;background-color:#ccc;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path fill="%23FFF" d="M0 0h1v2h1V1H0z"/></svg>');background-size:100%}.kint-rich dt>.kint-color-preview:hover{border-color:#aaa}.kint-rich dt>.kint-color-preview>div{width:100%;height:100%}.kint-rich table{border-collapse:collapse;empty-cells:show;border-spacing:0}.kint-rich table *{font-size:12px}.kint-rich table dt{background:none;padding:2px}.kint-rich table dt .kint-parent{min-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kint-rich table td,.kint-rich table th{border:1px solid #d7d7d7;padding:2px;vertical-align:center}.kint-rich table th{cursor:alias}.kint-rich table td:first-child,.kint-rich table th{font-weight:bold;background:#f8f8f8;color:#1d1e1e}.kint-rich table td{background:#f8f8f8;white-space:pre}.kint-rich table td>dl{padding:0}.kint-rich table pre{border-top:0;border-right:0}.kint-rich table thead th:first-child{background:none;border:0}.kint-rich table tr:hover>td{box-shadow:0 0 1px 0 #aaa inset}.kint-rich table tr:hover var{color:red}.kint-rich table ul.kint-tabs li.kint-active-tab{height:20px;line-height:17px}.kint-rich pre.kint-source{margin-left:-1px}.kint-rich pre.kint-source[data-kint-filename]:before{display:block;content:attr(data-kint-filename);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #f8f8f8}.kint-rich pre.kint-source>div:before{display:inline-block;content:counter(kint-l);counter-increment:kint-l;border-right:1px solid #aaa;padding-right:8px;margin-right:8px}.kint-rich pre.kint-source>div.kint-highlight{background:#f8f8f8}.kint-rich .kint-microtime-lap{text-shadow:-1px 0 #aaa,0 1px #aaa,1px 0 #aaa,0 -1px #aaa;color:#f8f8f8;font-weight:bold}input.kint-note-input{width:100%}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich dt{font-weight:normal}.kint-rich dt.kint-parent{margin-top:4px}.kint-rich dl dl{margin-top:4px;padding-left:25px;border-left:none}.kint-rich>dl>dt{background:#f8f8f8}.kint-rich ul{margin:0;padding-left:0}.kint-rich ul:not(.kint-tabs)>li{border-left:0}.kint-rich ul.kint-tabs{background:#f8f8f8;border:1px solid #d7d7d7;border-width:0 1px 1px 1px;padding:4px 0 0 12px;margin-left:-1px;margin-top:-1px}.kint-rich ul.kint-tabs li,.kint-rich ul.kint-tabs li+li{margin:0 0 0 4px}.kint-rich ul.kint-tabs li{border-bottom-width:0;height:25px}.kint-rich ul.kint-tabs li:first-child{margin-left:0}.kint-rich ul.kint-tabs li.kint-active-tab{border-top:1px solid #d7d7d7;background:#fff;font-weight:bold;padding-top:0;border-bottom:1px solid #fff !important;margin-bottom:-1px}.kint-rich ul.kint-tabs li.kint-active-tab:hover{border-bottom:1px solid #fff}.kint-rich ul>li>pre{border:1px solid #d7d7d7}.kint-rich dt:hover+dd>ul{border-color:#aaa}.kint-rich pre{background:#fff;margin-top:4px;margin-left:25px}.kint-rich .kint-source{margin-left:-1px}.kint-rich .kint-source .kint-highlight{background:#cfc}.kint-rich .kint-parent.kint-show>.kint-search{border-bottom-width:1px}.kint-rich table td{background:#fff}.kint-rich table td>dl{padding:0;margin:0}.kint-rich table td>dl>dt.kint-parent{margin:0}.kint-rich table td:first-child,.kint-rich table td,.kint-rich table th{padding:2px 4px}.kint-rich table dd,.kint-rich table dt{background:#fff}.kint-rich table tr:hover>td{box-shadow:none;background:#cfc}
+</style>
+
+    <title>WristBud Smart Watch</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>WristBud Smart Watch</title>
+    <link rel="stylesheet" href="css/app2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="https://offer.getrivalsmartwatch.com/offer/1/extensions/RepeatedOrderAlert/https://djunyrhp2z28m.cloudfront.net/assets/bestsmartwatchinindia.com/lp/intl-v1/css/repeated-order-confirmation.min.css">
+    <link rel="stylesheet" href="https://offer.getrivalsmartwatch.com/offer/1/extensions/RepeatedOrderAlert/https://djunyrhp2z28m.cloudfront.net/assets/bestsmartwatchinindia.com/lp/intl-v1/css/repeated-order-confirmation-additional.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+   <script>
+	!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '365134472824947');fbq('init', '430385696097037'); 
+	fbq('track', 'PageView');
+</script>
+</head>
+ 
+<body inject_vt_svd="true">
+   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=365134472824947&ev=PageView&noscript=1" /></noscript><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=430385696097037&ev=PageView&noscript=1" /></noscript>   
+
+    <div class="wrapper">
+        <!------TOP-STRIP------>
+        <div class="topStrip">
+            <div class="container">
+                <!-- <p id="caption">Special <span>70% OFF</span> Discount On Now. Limited Time Offer</p> -->
+            </div>
+        </div>
+
+        <!------TOP-FIX-BAR------>
+        <div class="top-fix-bar">
+            <div class="header"> 
+                <div class="container">
+                    <img src="images/logo.png" class="logo" height="134">
+                    <!-- <span class="logo" style="margin-top: 10px;font-size: 20px;font-weight: bold;">WristBud</span> -->
+                    <a ckxvariantid="43214004945091" class="nav-btn show-desk ckxpopup-open">Order Now</a>
+                    <div class="show-desk">
+                        <ul class="topMenu scroller show-desk">
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#comparision">Comparison</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                            <li><a href="#faqs">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="show-tab show-mob">
+                        <div class="mob-mnu-ic">
+                            <button class="dl-trigger" id="mobMenuBtn">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </button>
+                        </div>
+
+                        <ul class="mobilemenu">
+                            <li><a href="javascript:bookmarkscroll.scrollTo('overview')">Overview</a></li>
+                            <li><a href="javascript:bookmarkscroll.scrollTo('features')">Features</a></li>
+                            <li><a href="javascript:bookmarkscroll.scrollTo('comparision')">Comparison</a></li>
+                            <li><a href="javascript:bookmarkscroll.scrollTo('reviews')">Reviews</a></li>
+                            <li><a href="javascript:bookmarkscroll.scrollTo('faqs')">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------BANNER-SEC------->
+        <div class="banner">
+            <div class="container">
+                <div class="banner-left">
+                    <p class="bnrStar">
+                        <img src="images/banner-review-star.png" width="89" height="15">4.9 based on 2000+
+                        <span class="hide-mob">Verified</span> Reviews </p>
+                    <p class="bnrHeading">The Ultimate Health <br class="show-desk">&amp; Fitness Tracker </p>
+                    <div class="bnr-mob-div">
+                        <img src="images/strap-prod.png" class="bnrProd1 wow fadeInUp" width="565" height="724" style="z-index:1">
+                        <img src="images/dial-prod.gif" class="bnrProd2 wow fadeInUp" width="565" height="724">
+                    </div>
+
+                    <p class="bnrText1">Monitor your health &amp; fitness at a glance with real-time actionable insights
+                        into everything you need to reach your goals. </p>
+                    <ul class="bnrList">
+                        <li>Tracks 11 Health Parameters</li>
+                        <li>24/7 Heart &amp; Sleep Monitoring</li>
+                        <li>Calorie Burn &amp; Step Counter</li>
+                        <li>Daily Progress Tracker</li>
+                        <li>Smart Notifications Enabled</li>
+                        <li>Light, Durable &amp; Water Resistant</li>
+                    </ul>
+                    <div class="btnBox hide-mob">
+                        <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                            <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                            <small class="d-flex">
+                                <img src="images/money.svg"> Cash On
+                                Delivery Available
+                            </small>
+                        </a>
+                        <div class="btn-txt whiteText lightText">
+                            <p class="btn-text1">Ships by <span>
+                                    14 Mar
+                                </span></p> |
+                            <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14"> Stock: <span>Only 62 Trackers Left!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-1------->
+        <div class="section1" id="overview">
+            <div class="container">
+                <div class="s1Left hide-mob">
+                    <div class="s1Circle wow fadeInUp"></div>
+                    <img src="images/s1-prod.png" class="s1Prod wow fadeInUp" width="391" height="450">
+                </div>
+                <div class="s1Right">
+                    <p class="secName">Smartwatch + Fitness Tracker </p>
+                    <p class="commonHead">Monitoring &amp; Motivation On Your Wrist </p>
+                    <div class="s1Left show-mob">
+                        <div class="s1Circle"><img src="images/s1-prod.png" class="s1Prod" width="391" height="450"></div>
+                    </div>
+                    <p class="commonText">Say hello to <strong>WristBud</strong>, the all-new fashionable fitness tracker
+                        that gives you on-the-go real-time daily health &amp; fitness insights that help you understand your
+                        every move, track your progress &amp; reach your goals, everyday. </p>
+                    <p class="subHead">Big Brand Features at Fraction of the Price</p>
+                    <p class="commonText">Comfortable, lightweight &amp; durable <strong>WristBud</strong> comes with a variety
+                        of powerful features that help you stay connected, active &amp; engaged throughout your busy
+                        schedule.</p>
+                    <div class="btnBox hide-mob">
+                        <a class="comn-btn pulse ckxpopup-open" 43214004945091="">
+                            <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                            <small class="d-flex">
+                                <img src="images/money.svg"> Cash On
+                                Delivery Available
+                            </small>
+                        </a>
+                        <div class="btn-txt">
+                            <p class="btn-text1">Ships by <span>
+                                    14 Mar
+                                </span></p> |
+                            <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14"> Stock: <span>Only 62 Trackers Left!</span></p>
+                        </div>
+                    </div>
+                    <img src="images/s1-dots-left.png" class="s1Dotsleft hide-mob" width="310" height="105">
+                    <img src="images/s1-dots-right.png" class="s1DotsRight hide-mob" width="694" height="644">
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-2------->
+        <div class="section2" id="features">
+
+            <div class="s2Top">
+                <div class="container">
+                    <p class="secName whiteText">Small Size - Big Features</p>
+                    <p class="commonHead whiteText">Say Hello To <br class="show-mob">Smarter Fitness</p>
+                    <p class="commonText greyText lightText">Designed &amp; engineered to bring you the best of both worlds
+                        - a smartwatch &amp; fitness tracker, <br class="show-desk"><strong>WristBud</strong> comes
+                        fully-loaded with all the features that you need to level up &amp; stay ahead. </p>
+                    <div class="s2Mid">
+
+                        <div class="s2Col fl">
+                            <div class="s2Row">
+                                <img src="images/s2row-img2.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">Health Tracker </p>
+                                <p class="s2RowText">Automatic &amp; on-tap health monitoring of vital parameters including
+                                    heart rate, blood pressure, &amp; SPO2.</p>
+                            </div>
+                            <div class="s2Row">
+                                <img src="images/s2row-img4.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">Fitness Tracker</p>
+                                <p class="s2RowText">Multi-sports mode, step &amp; calorie counter, and "Get Moving"
+                                    reminders help keep you motivated &amp; on track to stay fit.</p>
+                            </div>
+                            <div class="s2Row">
+                                <img src="images/s2row-img1.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">Sleep Tracker</p>
+                                <p class="s2RowText">Monitors &amp; analyzes your sleep duration, stages &amp; quality to help
+                                    you improve your sleeping habits.</p>
+                            </div>
+                        </div>
+                        <img src="images/s2-prod.png" class="s2Prod hide-mob wow fadeInUp" width="807" height="688">
+                        <div class="s2Col fr">
+                            <div class="s2Row">
+                                <img src="images/40.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">Smartwatch Notifications</p>
+                                <p class="s2RowText">Stay connected with alerts for calls, texts, social media updates
+                                    without having to pull out your phone!</p>
+                            </div>
+                            <div class="s2Row">
+                                <img src="images/s2row-img3.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">20 Day Battery Life</p>
+                                <p class="s2RowText">The long lasting battery life lets you track your activities round
+                                    the clock on a single yet powerful charge.</p>
+                            </div>
+                            <div class="s2Row">
+                                <img src="images/s2row-img6.png" class="s2RowImg" width="200" height="200">
+                                <p class="s2RowHead">Weatherproof &amp; Durable</p>
+                                <p class="s2RowText">The IP67 rating makes it water resistant while the aluminum alloy
+                                    construction makes it sturdy yet lightweight.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s2Bottom">
+                <div class="container">
+                    <div class="s2AddBox">
+                        <p class="s2AddHead">Even More Features</p>
+                    </div>
+                    <ul class="s2List">
+                        <li>
+                            <p class="s2ListText">Message / Call <br>Notification</p>
+                            <img src="images/s2-add-icon1.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol1"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Blood Pressure <br>&amp; SPO2 Test </p>
+                            <img src="images/s2-add-icon7.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol2"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Weather <br>Update </p>
+                            <img src="images/s2-add-icon3.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol3"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Silent Alarm</p>
+                            <img src="images/s2-add-icon4.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol4"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Stop Watch</p>
+                            <img src="images/s2-add-icon5.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol5"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">8 Sports <br>Modes </p>
+                            <img src="images/s2-add-icon6.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol6"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Remind To <br>Move</p>
+                            <img src="images/s2-add-icon8.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol7"></span>
+                        </li>
+                        <li>
+                            <p class="s2ListText">Drink Water <br>Reminder </p>
+                            <img src="images/s2-add-icon2.png" class="addIcon" width="160" height="160">
+                            <span class="dot dotCol8"></span>
+                        </li>
+                        <li class="show-mob">
+                            <p class="s2ListText">Calorie</p>
+                            <img src="images/s2-add-icon9.png" class="addIcon" width="160" height="160">
+                        </li>
+                    </ul>
+                    <img src="images/s2-add-prod.png" class="s2AddProd wow fadeIn" width="954" height="887">
+                    <div class="btnBox hide-mob">
+                        <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                            <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                            <small class="d-flex">
+                                <img src="images/money.svg"> Cash On
+                                Delivery Available
+                            </small>
+                        </a>
+                        <div class="btn-txt">
+                            <p class="btn-text1">Ships by <span>
+                                    14 Mar
+                                </span></p> |
+                            <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14"> Stock: <span>Only 62 Trackers Left!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-3------->
+        <div class="section3">
+            <div class="container">
+                <div class="s3Inner">
+                    <p class="secName whiteText">Wearable Tech, Redefined </p>
+                    <p class="commonHead whiteText">The Last Smartwatch <br class="show-mob">You'll Buy </p>
+                    <img src="images/s3-left-img.png" class="s3LeftImg wow fadeIn" width="467" height="505">
+                    <img src="images/s3-right-img.png" class="s3RightImg wow fadeIn" width="412" height="483">
+                    <p class="commonText greyText lightText">Functional, fashionable &amp; fully loaded with the latest
+                        features, <strong>WristBud Smartwatch + Fitness Tracker</strong> is designed for every outfit &amp;
+                        occasion, transitions perfectly from your workouts to the office and everything in between!</p>
+                    <div class="btnBox hide-mob">
+                        <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                            <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                            <small class="d-flex">
+                                <img src="images/money.svg"> Cash On
+                                Delivery Available
+                            </small>
+                        </a>
+                        <div class="btn-txt whiteText lightText">
+                            <p class="btn-text1">Ships by <span>
+                                    14 Mar
+                                </span></p> |
+                            <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14"> Stock: <span>Only 62 Trackers Left!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-4------->
+        <div class="section4">
+            <div class="container">
+                <div class="s4Left">
+                    <div class="s4LeftInner">
+                        <p class="secName">Built To Move</p>
+                        <p class="commonHead">Inspires <br>Movement</p>
+                        <p class="commonText"><strong>WristBud</strong> is designed to inspire <br class="show-desk">&amp; keep
+                            up with your active lifestyle, every step of the way. </p>
+                    </div>
+                </div>
+                <div class="s4Right">
+                    <div class="s4RightInner">
+                        <p class="secName">Variant Colors</p>
+                        <p class="commonHead">Multi-Color <br class="hide-mob">Options</p>
+                        <p class="commonText">Three colors for choosing, matching your favorite style, wonderful forever.
+                        </p>
+                        <ul class="colorList hide-mob">
+                            <!--<li>
+                                <div class="colorDot blackDot"></div>
+                                <p class="colorName">Black</p>
+                            </li>-->
+                            <li>
+                                <div class="colorDot blueDot"></div>
+                                <p class="colorName">Navy</p>
+                            </li>
+                            <!--<li>
+                                <div class="colorDot yellowDot"></div>
+                                <p class="colorName">Yellow</p>
+                            </li>-->
+                            <li>
+                                <div class="colorDot whiteDot"></div>
+                                <p class="colorName">White</p>
+                            </li>
+                            <li>
+                                <div class="colorDot pinkDot"></div>
+                                <p class="colorName">Pink</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="images/sec4-rght-img-mob.jpg" class="show-mob s4RightBg" width="555" height="283">
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-5------->
+        <div class="section5" id="comparision">
+            <div class="container">
+                <p class="secName">Comparison</p>
+                <p class="commonHead">WristBud Vs Competition</p>
+                <p class="commonText"><strong>WristBud</strong> has been precision designed &amp; engineered to combine the
+                    most advanced features <br class="show-desk">&amp; functionality with unparalleled comfort, making it
+                    the better choice! </p>
+
+                <div class="s5CompBox">
+                    <div class="s5Col1">
+                        <ul>
+                            <li>Monitors <br class="show-mob"> Heart Rate</li>
+                            <li>Measures <br class="show-mob"> SPO2 Levels</li>
+                            <li>Measures <br class="show-mob"> Blood Pressure</li>
+                            <li>Monitors <br class="show-mob"> Sleep Patterns</li>
+                            <li>8-in-1 <br class="show-mob"> Sports Mode</li>
+                            <li>Smart Notifications</li>
+                            <li>Money <br class="show-mob"> Back Guarantee</li>
+                        </ul>
+                    </div>
+                    <div class="s5Col2">
+                        <div class="s5Col2Top">
+                            <img src="images/comp-prod1.png" class="s5Col2Prod" width="94" height="138">
+                            <p>WristBud</p>
+                        </div>
+                        <ul>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                        </ul>
+                    </div>
+
+                    <div class="s5Col2 s5Col3">
+                        <div class="s5Col2Top s5Col3Top">
+                            <img src="images/comp-prod2.png" class="s5Col3Prod" width="110" height="120">
+                            <p>Competitor <span class="hide-mob">1</span></p>
+                        </div>
+                        <ul>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-chk.png" width="33" height="28"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                        </ul>
+                    </div>
+
+                    <div class="s5Col2 s5Col4 hide-mob">
+                        <div class="s5Col2Top s5Col4Top">
+                            <img src="images/comp-prod3.png" class="s5Col4Prod" width="110" height="120">
+                            <p>Competitor 2</p>
+                        </div>
+                        <ul>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                            <li><img src="images/comp-cross.png" width="26" height="27"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!------SECTION-6------->
+        <div class="section6">
+            <div class="container">
+                <div class="s6Left">
+                    <img src="images/30day.png" class="s6SealBg" width="331" height="497">
+                </div>
+                <div class="s6Right">
+                    <p class="commonHead whiteText">30 Days Money Back <br>Guarantee </p>
+                    <p class="commonText greyText lightText">We're confident you will love staying in shape with
+                        <strong>WristBud Smartwatch &amp; Fitness Tracker</strong> just like our 2000+ customers. However, in
+                        the unlikely case you are not satisfied, just return the package within 30 days for a 
+                        refund, no questions asked! </p>
+                    <div class="btnBox hide-mob">
+                        <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                            <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                            <small class="d-flex">
+                                <img src="images/money.svg"> Cash On
+                                Delivery Available
+                            </small>
+                        </a>
+                        <div class="btn-txt lightText whiteText">
+                            <p class="btn-text1">Ships by <span>
+                                    14 Mar
+                                </span></p> |
+                            <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14"> Stock: <span>Only 62 Trackers Left!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-7------->
+        <div class="section7" id="reviews">
+            <div class="container">
+                <p class="secName">Customer Testimonials</p>
+                <p class="commonHead">What Watch Owners Say</p>
+                <div class="s7Mid">
+                    <div class="testBox">
+                        <div class="testCol">
+                            <img src="images/test-image1.jpg" class="testImage" width="370" height="370">
+                            <img src="images/star.png" class="testStar" width="102" height="18">
+                            <p class="commonText testhead">Keeps Me Motivated &amp; On Track!</p>
+                            <p class="commonText">The progress tracker helps me set weekly goals for steps to calories
+                                to sleep, so it keeps me motivated to reach them! The quality is superior to the
+                                expensive brand smart watches out there for sure!</p>
+                            <p class="testName">Pankaj<img src="images/verified.png" width="13" height="16"><span>Verified Buyer</span></p>
+                        </div>
+                        <div class="testCol">
+                            <img src="images/test-image2.jpg" class="testImage" width="370" height="369">
+                            <img src="images/star.png" class="testStar" width="102" height="18">
+                            <p class="commonText testhead">5 Stars All The Way! </p>
+                            <p class="commonText">I have been using this for 3 months now, it's super comfortable &amp;
+                                lightweight for all day wear! I love the way it tracks my workouts &amp; gives me prompts
+                                when I need them the most.</p>
+                            <p class="testName">Vikas Kumar<img src="images/verified.png" width="13" height="16"><span>Verified Buyer</span></p>
+                        </div>
+                        <div class="testCol">
+                            <img src="images/test-image3.jpg" class="testImage" width="370" height="370">
+                            <img src="images/star.png" class="testStar" width="102" height="18">
+                            <p class="commonText testhead">Health Monitoring At Its Best!</p>
+                            <p class="commonText">Definitely the most advanced health tracker - apart from measuring the
+                                regular parameters - it helps you measure your blood pressure &amp; SPO2 levels on a single
+                                tap! The smart notifications are great too - and I don't have to pull out my phone every
+                                time.</p>
+                            <p class="testName">Dr. Shiv Verma <img src="images/verified.png" width="13" height="16"><span>Verified Buyer</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnBox hide-mob">
+                    <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                        <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                        <small class="d-flex">
+                            <img src="images/money.svg"> Cash On
+                            Delivery Available
+                        </small>
+                    </a>
+                    <div class="btn-txt">
+                        <p class="btn-text1">Ships by <span>
+                                14 Mar
+                            </span></p> |
+                        <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14">
+                            Stock: <span>Only 62 Trackers Left!</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------SECTION-8------->
+        <div class="section8" id="faqs">
+            <div class="container">
+                <p class="secName">We’ve All The Answers</p>
+                <p class="commonHead">Frequently Asked Question</p>
+
+                <div class="faq-container">
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-open" id="hd-one">How long will shipping take?
+                        </div>
+                        <div class="acdn-content">
+                            <p class="acdn-para">Ships in 1 day and Delivered in 2-6 days depending on your location. We ship from Gurgaon.</p>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">Where can I download the app?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">You can download or update the DaFit app here</p>
+                            <a href="#" target="_blank" class="acdnImg">
+                                <img src="images/store-android.svg" width="181" height="54">
+                            </a>
+                            <a href="#" target="_blank" class="acdnImg">
+                                <img src="images/store-apple.svg" width="181" height="54">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">Will this watch work with my phone?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">This smart watch works on any Android with a 5.0+ version and iOS 9.0+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">Can I change the date and time?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">The date and time will automatically be updated once the smart watch is
+                                paired with the app through Bluetooth.</p>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">What if I get inaccurate readings?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">Please remember to remove the protector film from the laser sensor
+                                before use.</p>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">How do I connect my smart watch via
+                            Bluetooth?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <ul class="acdnList acdnBorder">
+                                <li><span class="acdnListNo">Step 1:</span> Wake your Smart Phone Device by pressing the
+                                    button on the side of the watch.</li>
+                                <li><span class="acdnListNo">Step 2:</span> Go back to the app, tap the “ADD A DEVICE”
+                                    button on the top right of the screen.</li>
+                                <li><span class="acdnListNo">Step 3:</span> Grant the device access to your smart phone
+                                    when prompted.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">How can I change my smart phone display?
+                        </div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para acdnSubHead">From the Watch</p>
+                            <ul class="acdnList acdnBorder">
+                                <li><span class="acdnListNo">Step 1:</span> Press and hold your finger on your current
+                                    clock face to open the clocks app.</li>
+                                <li><span class="acdnListNo">Step 2:</span> Move right or left to see the options.</li>
+                                <li><span class="acdnListNo">Step 3:</span> Select the desired choice.</li>
+                            </ul>
+                            <p class="acdn-para acdnSubHead">From the App</p>
+                            <ul class="acdnList  acdnBorder">
+                                <li><span class="acdnListNo">Step 1:</span> Open the app from your smart phone.</li>
+                                <li><span class="acdnListNo">Step 2:</span> Tap the device icon.</li>
+                                <li><span class="acdnListNo">Step 3:</span> Tap “Watch Faces”</li>
+                                <li><span class="acdnListNo">Step 4:</span> Choose a clock face you like and tap. The
+                                    changes will automatically applied to your device.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">How do I measure my blood pressure
+                            correctly?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">For measuring blood pressure, smartwatches use the optical heart rate
+                                sensor. It detects the time it takes for a pulse to travel from the heart to the wrist.
+                                It is also known as Pulse Transit Time (PTT), based on which it shows the blood pressure
+                                readings. If the blood pressure is high, the pulse transit time is faster, and if the
+                                blood pressure is low, the pulse transit time is slower. Measuring blood pressure is
+                                much harder than tracking heart rate and rhythm, and getting it right is arguable even
+                                more important. Having more ways to easily take blood pressure measurements at home
+                                could be a big benefits to people with hypertension (high blood pressure) or other
+                                concerns. Pressure measurement taken exclusively in a doctor’s office are often
+                                unreliable: Some people have higher blood pressure in-office because they’re anxious
+                                about the visit, while other people have masked hypertension – high blood pressure at
+                                home, but normal blood pressure at the doctor.</p>
+                            <p class="acdn-para acdnSubHead">Use this checklist:</p>
+                            <ul class="acdnList acdnListStyle">
+                                <li>Don’t eat or drink anything 30 minutes before you take your blood pressure.</li>
+                                <li>Empty your bladder before your reading.</li>
+                                <li>Sit in a comfortable chair with your back supported for at least 5 minutes before
+                                    your reading.</li>
+                                <li>Put both feet flat on the ground and keep your legs uncrossed.</li>
+                                <li>Rest your arm with the cuff on a table at chest height.</li>
+                                <li>Make sure the smart watch is snug but not too tight. The watch should be against
+                                    your bare skin, not over clothing.</li>
+                                <li>Do not talk while taking your blood pressure.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="up-slide-dwn">
+                        <div class="accordion acdn-heading accordion-close">Can I replace the watch band?</div>
+                        <div class="acdn-content" style="display: none;">
+                            <p class="acdn-para">You can customize your order after checkout by purchasing additional
+                                watch bands in the additional colors we offer. We currently stock white, pink and navy
+                                blue.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btnBox hide-mob">
+                    <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                        <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                        <small class="d-flex">
+                            <img src="images/money.svg"> Cash On
+                            Delivery Available
+                        </small>
+                    </a>
+                    <div class="btn-txt">
+                        <p class="btn-text1">Ships by <span>
+                                14 Mar
+                            </span></p> |
+                        <p class="btn-text2"><img src="images/Shape.png" class="hourglass" width="10" height="14">
+                            Stock: <span>Only 62 Trackers Left!</span></p>
+                    </div>
+                </div>
+                <div class="below_btn">
+                    <h3 class="text-white">2000+</h3>
+                    <img src="images/banner-review-star_1.png" alt="5 star" width="87" height="15">
+                    <p>Satisfied Customers Who Love Our Products/Services</p>
+                    <img src="images/review1.png">
+                    <img class="bg-white" src="images/creadit-card.png">
+                    <img class="bg-white" src="images/trust-badges1.png">
+                </div>
+            </div>
+        </div>
+
+        <!------FOOTER------->
+        <div class="footer">
+            <div class="show-mob">
+                <div id="ctabtn-mob" style="position:relative;">
+                    <a class="comn-btn pulse ckxpopup-open" ckxvariantid="43214004945091">
+                        <div> Order Now @ 2,499 <img src="images/btn-arw.png" class="btn-arw" width="34" height="33"></div>
+                        <small class="d-flex">
+                            <img src="images/money.svg"> Cash On
+                            Delivery Available
+                        </small>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="images/logo.png" class="footerLogo" width="150" height="134">
+                <p class="ftrText1">
+                    <a href="#" target="_blank">Terms &amp; Conditions</a> |
+                    <a href="#" target="_blank">Privacy Policy</a> <span class="hide-mob">|</span> <br class="show-mob">
+                    <a href="#" target="_blank">Contact Us</a>
+                </p>
+
+                <p class="ftrText1">©
+                   2024 WristBud. All Rights Reserved.
+                </p>
+                <center>
+                    <a href="#" title="DMCA.com Protection Status" target="_blank" class="dmca-badge"> <img src="images/dmca_protected_sml_120n.png" alt="DMCA.com Protection Status"></a> 
+                </center>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.accordion.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        new WOW().init();
+
+        $('.mob-mnu-ic, ul.mobilemenu li a').click(function (e) {
+            $('.mobilemenu').slideToggle();
+            $('.dl-trigger').toggleClass('dl-active');
+        });
+
+        //$('.topMenu').scroller();
+
+        $('.testBox').slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplaySpeed: 8000,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 9999,
+                    settings: "unslick"
+                },
+
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: true,
+                        centerMode: true,
+                        arrows: false,
+                    }
+                }
+            ]
+        });
+
+        $('.accordion').accordion({
+            defaultOpen: 'hd-one',
+            speed: 'slow'
+        });
+        });
+        $(document).scroll(function() {	
+            new WOW().init();
+            if ($(this).scrollTop() > 40){
+                $('.top-fix-bar').addClass('fixed-nav');
+            }else{
+                $('.top-fix-bar').removeClass('fixed-nav');
+            }
+            
+            if ($(this).scrollTop() > 20){
+                $('.mobilemenu').addClass('mobimenu-top');
+            }else{
+                $('.mobilemenu').removeClass('mobimenu-top');
+            }
+		
+            var $elem = $('.footer');
+            var $window = $(window);
+        
+            var docViewTop = $window.scrollTop();
+            var docViewBottom = docViewTop + $window.height();
+        
+            var elemTop = $elem.offset().top;
+            var elemBottom = elemTop + $elem.height();
+        
+            if (elemTop >= (docViewBottom + 20) || (elemTop + $('#ctabtn-mob').height()) >= (docViewBottom + 134) ) {
+                $('#ctabtn-mob').css('position', 'fixed');
+            } else {
+                $('#ctabtn-mob').css({'position' : 'relative'});	
+            }	
+        });
+    </script>
+
+
+
+
+
+<script src="js/661d04899f44f839120af2f0.js"></script> 
+<script>
+    document.querySelectorAll("input[name='header_pack']").forEach(function (elem) {
+        elem.addEventListener("click", function (e) {
+        ckxapp.currentProduct = ckxapp.products.filter((x) => { return x.variant_id == e.target.value })
+        });
+    });
+</script>
+<!-- DEBUG-VIEW ENDED 2 APPPATH/Views/actions/lp/ckx.php -->
+</body></html><!-- DEBUG-VIEW ENDED 1 APPPATH/Views/bestsmartwatchinindia.com/lp/intl-v1/index.php --><!-- DEBUG-VIEW START 2 APPPATH/Views/actions/lp/ckx.php -->

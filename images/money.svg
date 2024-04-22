@@ -1,0 +1,31 @@
+{
+    "title": "CodeIgniter\\Exceptions\\PageNotFoundException",
+    "type": "CodeIgniter\\Exceptions\\PageNotFoundException",
+    "code": 404,
+    "message": "Page Not Found",
+    "file": "/usr/share/nginx/microd2c/html/system/CodeIgniter.php",
+    "line": 988,
+    "trace": [
+        {
+            "file": "/usr/share/nginx/microd2c/html/system/CodeIgniter.php",
+            "line": 988,
+            "function": "forPageNotFound",
+            "class": "CodeIgniter\\Exceptions\\PageNotFoundException",
+            "type": "::"
+        },
+        {
+            "file": "/usr/share/nginx/microd2c/html/system/CodeIgniter.php",
+            "line": 370,
+            "function": "display404errors",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->"
+        },
+        {
+            "file": "/usr/share/nginx/microd2c/html/public/index.php",
+            "line": 79,
+            "function": "run",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->"
+        }
+    ]
+}
