@@ -1,6 +1,6 @@
 {
  "rewrites": [
-   { "source": "/smw1", "destination": "/new.html" }
+   { "source": "/smw1", "destination": "/index.html" }
 
  ]
 }
