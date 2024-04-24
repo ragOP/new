@@ -618,7 +618,7 @@ ul.prod-list li{
 	padding:0 25px 25px;
 	display: table;
 	z-index: 99;
-	transition: bottom 1s;
+	
 	}
 #cta-fixed-button .button{ margin:0;}
 
