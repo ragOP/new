@@ -1,532 +1,2251 @@
-<!-- DEBUG-VIEW START 1 APPPATH/Views/neverslouch.com/pl/topr-v1/index.php --><!DOCTYPE html><html><head>
-<script async="" src="jss/fbevents.js"></script><script id="debugbar_loader" data-time="1713920923.073663" src="http://localhost:8080/index.php?debugbar"></script><script id="debugbar_dynamic_script"></script><style id="debugbar_dynamic_style"></style><script class="kint-rich-script">void 0===window.kintShared&&(window.kintShared=function(){"use strict";var e={dedupe:function(e,n){return[].forEach.call(document.querySelectorAll(e),function(e){e!==(n=n&&n.ownerDocument.contains(n)?n:e)&&e.parentNode.removeChild(e)}),n},runOnce:function(e){"complete"===document.readyState?e():window.addEventListener("load",e)}};return window.addEventListener("click",function(e){var n;e.target.classList.contains("kint-ide-link")&&((n=new XMLHttpRequest).open("GET",e.target.href),n.send(null),e.preventDefault())}),e}());
-void 0===window.kintRich&&(window.kintRich=function(){"use strict";var l={selectText:function(e){var t=window.getSelection(),a=document.createRange();a.selectNodeContents(e),t.removeAllRanges(),t.addRange(a)},toggle:function(e,t){var a=l.getChildren(e);a&&(e.classList.toggle("kint-show",t),1===a.childNodes.length)&&(a=a.childNodes[0].childNodes[0])&&a.classList&&a.classList.contains("kint-parent")&&l.toggle(a,t)},toggleChildren:function(e,t){var a=l.getChildren(e);if(a){var o=a.getElementsByClassName("kint-parent"),s=o.length;for(void 0===t&&(t=e.classList.contains("kint-show"));s--;)l.toggle(o[s],t)}},switchTab:function(e){var t=e.previousSibling,a=0;for(e.parentNode.getElementsByClassName("kint-active-tab")[0].classList.remove("kint-active-tab"),e.classList.add("kint-active-tab");t;)1===t.nodeType&&a++,t=t.previousSibling;for(var o=e.parentNode.nextSibling.childNodes,s=0;s<o.length;s++)s===a?(o[s].classList.add("kint-show"),1===o[s].childNodes.length&&(t=o[s].childNodes[0].childNodes[0])&&t.classList&&t.classList.contains("kint-parent")&&l.toggle(t,!0)):o[s].classList.remove("kint-show")},mktag:function(e){return"<"+e+">"},openInNewWindow:function(e){var t=window.open();t&&(t.document.open(),t.document.write(l.mktag("html")+l.mktag("head")+l.mktag("title")+"Kint ("+(new Date).toISOString()+")"+l.mktag("/title")+l.mktag('meta charset="utf-8"')+l.mktag('script class="kint-rich-script" nonce="'+l.script.nonce+'"')+l.script.innerHTML+l.mktag("/script")+l.mktag('style class="kint-rich-style" nonce="'+l.style.nonce+'"')+l.style.innerHTML+l.mktag("/style")+l.mktag("/head")+l.mktag("body")+'<input class="kint-note-input" placeholder="Take some notes!"><div class="kint-rich">'+e.parentNode.outerHTML+"</div>"+l.mktag("/body")),t.document.close())},sortTable:function(e,a){var t=e.tBodies[0];[].slice.call(e.tBodies[0].rows).sort(function(e,t){if(e=e.cells[a].textContent.trim().toLocaleLowerCase(),t=t.cells[a].textContent.trim().toLocaleLowerCase(),isNaN(e)||isNaN(t)){if(isNaN(e)&&!isNaN(t))return 1;if(isNaN(t)&&!isNaN(e))return-1}else e=parseFloat(e),t=parseFloat(t);return e<t?-1:t<e?1:0}).forEach(function(e){t.appendChild(e)})},showAccessPath:function(e){for(var t=e.childNodes,a=0;a<t.length;a++)if(t[a].classList&&t[a].classList.contains("access-path"))return t[a].classList.toggle("kint-show"),void(t[a].classList.contains("kint-show")&&l.selectText(t[a]))},showSearchBox:function(e){var t=e.querySelector(".kint-search");t&&(t.classList.toggle("kint-show"),t.classList.contains("kint-show")?(e.classList.add("kint-show"),t.focus(),t.select(),l.search(e.parentNode,t.value)):e.parentNode.classList.remove("kint-search-root"))},search:function(e,t){e.querySelectorAll(".kint-search-match").forEach(function(e){e.classList.remove("kint-search-match")}),e.classList.remove("kint-search-match"),e.classList.toggle("kint-search-root",t.length),t.length&&l.findMatches(e,t)},findMatches:function(e,t){var a,o,s,n=e.cloneNode(!0);if(n.querySelectorAll(".access-path").forEach(function(e){e.remove()}),-1!=n.textContent.toUpperCase().indexOf(t.toUpperCase())){for(r in e.classList.add("kint-search-match"),e.childNodes)if("DD"==e.childNodes[r].tagName){a=e.childNodes[r];break}if(a)if([].forEach.call(a.childNodes,function(e){"DL"==e.tagName?l.findMatches(e,t):"UL"==e.tagName&&(e.classList.contains("kint-tabs")?o=e.childNodes:e.classList.contains("kint-tab-contents")&&(s=e.childNodes))}),o&&s&&o.length==s.length)for(var r=0;r<o.length;r++){var i=!1;(i=-1!=o[r].textContent.toUpperCase().indexOf(t.toUpperCase())||((n=s[r].cloneNode(!0)).querySelectorAll(".access-path").forEach(function(e){e.remove()}),-1!=n.textContent.toUpperCase().indexOf(t.toUpperCase()))?!0:i)&&(o[r].classList.add("kint-search-match"),[].forEach.call(s[r].childNodes,function(e){"DL"==e.tagName&&l.findMatches(e,t)}))}}},getParentByClass:function(e,t){for(;;){if(!(e=e.parentNode)||!e.classList||e===document)return null;if(e.classList.contains(t))return e}return null},getParentHeader:function(e,t){for(var a=e.nodeName.toLowerCase();"dd"!==a&&"dt"!==a&&l.getParentByClass(e,"kint-rich");)a=(e=e.parentNode).nodeName.toLowerCase();return l.getParentByClass(e,"kint-rich")?(e="dd"===a&&t?e.previousElementSibling:e)&&"dt"===e.nodeName.toLowerCase()&&e.classList.contains("kint-parent")?e:void 0:null},getChildren:function(e){for(;(e=e.nextElementSibling)&&"dd"!==e.nodeName.toLowerCase(););return e},isFolderOpen:function(){if(l.folder&&l.folder.querySelector("dd.kint-foldout"))return l.folder.querySelector("dd.kint-foldout").previousSibling.classList.contains("kint-show")},initLoad:function(){l.style=window.kintShared.dedupe("style.kint-rich-style",l.style),l.script=window.kintShared.dedupe("script.kint-rich-script",l.script),l.folder=window.kintShared.dedupe(".kint-rich.kint-folder",l.folder);var t,e=document.querySelectorAll("input.kint-search");[].forEach.call(e,function(t){function e(e){window.clearTimeout(a),t.value!==o&&(a=window.setTimeout(function(){o=t.value,l.search(t.parentNode.parentNode,o)},500))}var a=null,o=null;t.removeEventListener("keyup",e),t.addEventListener("keyup",e)}),l.folder&&(t=l.folder.querySelector("dd"),[].forEach.call(document.querySelectorAll(".kint-rich.kint-file"),function(e){e.parentNode!==l.folder&&t.appendChild(e)}),document.body.appendChild(l.folder),l.folder.classList.add("kint-show"))},keyboardNav:{targets:[],target:0,active:!1,fetchTargets:function(){var e=l.keyboardNav.targets[l.keyboardNav.target];l.keyboardNav.targets=[],document.querySelectorAll(".kint-rich nav, .kint-tabs>li:not(.kint-active-tab)").forEach(function(e){l.isFolderOpen()&&!l.folder.contains(e)||0===e.offsetWidth&&0===e.offsetHeight||l.keyboardNav.targets.push(e)}),e&&-1!==l.keyboardNav.targets.indexOf(e)&&(l.keyboardNav.target=l.keyboardNav.targets.indexOf(e))},sync:function(e){var t=document.querySelector(".kint-focused");t&&t.classList.remove("kint-focused"),l.keyboardNav.active&&((t=l.keyboardNav.targets[l.keyboardNav.target]).classList.add("kint-focused"),e||l.keyboardNav.scroll(t))},scroll:function(e){var t,a;l.folder&&e===l.folder.querySelector("dt > nav")||(e=(t=function(e){return e.offsetTop+(e.offsetParent?t(e.offsetParent):0)})(e),l.isFolderOpen()?(a=l.folder.querySelector("dd.kint-foldout")).scrollTo(0,e-a.clientHeight/2):window.scrollTo(0,e-window.innerHeight/2))},moveCursor:function(e){for(l.keyboardNav.target+=e;l.keyboardNav.target<0;)l.keyboardNav.target+=l.keyboardNav.targets.length;for(;l.keyboardNav.target>=l.keyboardNav.targets.length;)l.keyboardNav.target-=l.keyboardNav.targets.length;l.keyboardNav.sync()},setCursor:function(e){if(!l.isFolderOpen()||l.folder.contains(e)){l.keyboardNav.fetchTargets();for(var t=0;t<l.keyboardNav.targets.length;t++)if(e===l.keyboardNav.targets[t])return l.keyboardNav.target=t,!0}return!1}},mouseNav:{lastClickTarget:null,lastClickTimer:null,lastClickCount:0,renewLastClick:function(){window.clearTimeout(l.mouseNav.lastClickTimer),l.mouseNav.lastClickTimer=window.setTimeout(function(){l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickTimer=null,l.mouseNav.lastClickCount=0},250)}},style:null,script:null,folder:null};return window.addEventListener("click",function(e){var t=e.target;if(l.mouseNav.lastClickTarget&&l.mouseNav.lastClickTimer&&l.mouseNav.lastClickCount)if(t=l.mouseNav.lastClickTarget,1===l.mouseNav.lastClickCount)l.toggleChildren(t.parentNode),l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),l.mouseNav.lastClickCount++,l.mouseNav.renewLastClick();else{for(var a=t.parentNode.classList.contains("kint-show"),o=document.getElementsByClassName("kint-parent"),s=o.length;s--;)l.toggle(o[s],a);l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),l.keyboardNav.scroll(t),window.clearTimeout(l.mouseNav.lastClickTimer),l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickTarget=null,l.mouseNav.lastClickCount=0}else if(l.getParentByClass(t,"kint-rich")){var n=t.nodeName.toLowerCase();if("dfn"===n&&l.selectText(t),"th"===n)e.ctrlKey||l.sortTable(t.parentNode.parentNode.parentNode,t.cellIndex);else if((t=l.getParentHeader(t))&&(l.keyboardNav.setCursor(t.querySelector("nav")),l.keyboardNav.sync(!0)),t=e.target,"li"===n&&"kint-tabs"===t.parentNode.className)"kint-active-tab"!==t.className&&l.switchTab(t),(t=l.getParentHeader(t,!0))&&(l.keyboardNav.setCursor(t.querySelector("nav")),l.keyboardNav.sync(!0));else if("nav"===n)"footer"===t.parentNode.nodeName.toLowerCase()?(l.keyboardNav.setCursor(t),l.keyboardNav.sync(!0),(t=t.parentNode).classList.toggle("kint-show")):(l.toggle(t.parentNode),l.keyboardNav.fetchTargets(),l.mouseNav.lastClickCount=1,l.mouseNav.lastClickTarget=t,l.mouseNav.renewLastClick());else if(t.classList.contains("kint-popup-trigger")){var r=t.parentNode;if("footer"===r.nodeName.toLowerCase())r=r.previousSibling;else for(;r&&!r.classList.contains("kint-parent");)r=r.parentNode;l.openInNewWindow(r)}else t.classList.contains("kint-access-path-trigger")?l.showAccessPath(t.parentNode):t.classList.contains("kint-search-trigger")?l.showSearchBox(t.parentNode):t.classList.contains("kint-search")||("pre"===n&&3===e.detail?l.selectText(t):l.getParentByClass(t,"kint-source")&&3===e.detail?l.selectText(l.getParentByClass(t,"kint-source")):t.classList.contains("access-path")?l.selectText(t):"a"!==n&&(t=l.getParentHeader(t))&&(l.toggle(t),l.keyboardNav.fetchTargets()))}},!0),window.addEventListener("keydown",function(e){if(e.target===document.body&&!e.altKey&&!e.ctrlKey)if(68===e.keyCode){if(l.keyboardNav.active)l.keyboardNav.active=!1;else if(l.keyboardNav.active=!0,l.keyboardNav.fetchTargets(),0===l.keyboardNav.targets.length)return void(l.keyboardNav.active=!1);l.keyboardNav.sync(),e.preventDefault()}else if(l.keyboardNav.active)if(9===e.keyCode)l.keyboardNav.moveCursor(e.shiftKey?-1:1),e.preventDefault();else if(38===e.keyCode||75===e.keyCode)l.keyboardNav.moveCursor(-1),e.preventDefault();else if(40===e.keyCode||74===e.keyCode)l.keyboardNav.moveCursor(1),e.preventDefault();else{var t,a,o=l.keyboardNav.targets[l.keyboardNav.target];if("li"===o.nodeName.toLowerCase()){if(32===e.keyCode||13===e.keyCode)return l.switchTab(o),l.keyboardNav.fetchTargets(),l.keyboardNav.sync(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode)return l.keyboardNav.moveCursor(1),void e.preventDefault();if(37===e.keyCode||72===e.keyCode)return l.keyboardNav.moveCursor(-1),void e.preventDefault()}o=o.parentNode,65===e.keyCode?(l.showAccessPath(o),e.preventDefault()):"footer"===o.nodeName.toLowerCase()&&o.parentNode.classList.contains("kint-rich")?32===e.keyCode||13===e.keyCode?(o.classList.toggle("kint-show"),e.preventDefault()):37===e.keyCode||72===e.keyCode?(o.classList.remove("kint-show"),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode||(o.classList.add("kint-show"),e.preventDefault()):32===e.keyCode||13===e.keyCode?(l.toggle(o),l.keyboardNav.fetchTargets(),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode&&37!==e.keyCode&&72!==e.keyCode||(t=39===e.keyCode||76===e.keyCode,o.classList.contains("kint-show")?l.toggleChildren(o,t):t||(a=l.getParentHeader(o.parentNode.parentNode,!0))&&(l.keyboardNav.setCursor((o=a).querySelector("nav")),l.keyboardNav.sync()),l.toggle(o,t),l.keyboardNav.fetchTargets(),e.preventDefault())}},!0),l}()),window.kintShared.runOnce(window.kintRich.initLoad);
-void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,window.addEventListener("load",function(){"use strict";var a={},t=Array.prototype.slice.call(document.querySelectorAll("[data-kint-microtime-group]"),0);t.forEach(function(t){var i,e;t.querySelector(".kint-microtime-lap")&&(i=t.getAttribute("data-kint-microtime-group"),e=parseFloat(t.querySelector(".kint-microtime-lap").innerHTML),t=parseFloat(t.querySelector(".kint-microtime-avg").innerHTML),void 0===a[i]&&(a[i]={}),(void 0===a[i].min||a[i].min>e)&&(a[i].min=e),(void 0===a[i].max||a[i].max<e)&&(a[i].max=e),a[i].avg=t)}),t.forEach(function(t){var i,e,r,o,n=t.querySelector(".kint-microtime-lap");null!==n&&(i=parseFloat(n.textContent),o=t.dataset.kintMicrotimeGroup,e=a[o].avg,r=a[o].max,o=a[o].min,i!==(t.querySelector(".kint-microtime-avg").textContent=e)||i!==o||i!==r)&&(n.style.background=e<i?"hsl("+(40-40*((i-e)/(r-e)))+", 100%, 65%)":"hsl("+(40+80*(e===o?0:(e-i)/(e-o)))+", 100%, 65%)")})}));
-</script><style class="kint-rich-style">.kint-rich{font-size:13px;overflow-x:auto;white-space:nowrap;background:rgba(255,255,255,.9)}.kint-rich.kint-folder{position:fixed;bottom:0;left:0;right:0;z-index:999999;width:100%;margin:0;display:block}.kint-rich.kint-folder dd.kint-foldout{max-height:calc(100vh - 100px);padding-right:8px;overflow-y:scroll;display:none}.kint-rich.kint-folder dd.kint-foldout.kint-show{display:block}.kint-rich::selection,.kint-rich::-moz-selection,.kint-rich::-webkit-selection{background:#aaa;color:#1d1e1e}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich,.kint-rich::before,.kint-rich::after,.kint-rich *,.kint-rich *::before,.kint-rich *::after{box-sizing:border-box;border-radius:0;color:#1d1e1e;float:none !important;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;line-height:15px;margin:0;padding:0;text-align:left}.kint-rich{margin:8px 0}.kint-rich dt,.kint-rich dl{width:auto}.kint-rich dt,.kint-rich div.access-path{background:#f8f8f8;border:1px solid #d7d7d7;color:#1d1e1e;display:block;font-weight:bold;list-style:none outside none;overflow:auto;padding:4px}.kint-rich dt:hover,.kint-rich div.access-path:hover{border-color:#aaa}.kint-rich>dl dl{padding:0 0 0 12px}.kint-rich dt.kint-parent>nav,.kint-rich>footer>nav{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNTAiPjxwYXRoIGQ9Ik02IDdoMThsLTkgMTV6bTAgMzBoMThsLTkgMTV6bTAgNDVoMThsLTktMTV6bTAgMzBoMThsLTktMTV6bTAgMTJsMTggMThtLTE4IDBsMTgtMTgiIGZpbGw9IiM1NTUiLz48cGF0aCBkPSJNNiAxMjZsMTggMThtLTE4IDBsMTgtMTgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjNTU1Ii8+PC9zdmc+") no-repeat scroll 0 0/15px 75px rgba(0,0,0,0);cursor:pointer;display:inline-block;height:15px;width:15px;margin-right:3px;vertical-align:middle}.kint-rich dt.kint-parent:hover>nav,.kint-rich>footer>nav:hover{background-position:0 25%}.kint-rich dt.kint-parent.kint-show>nav,.kint-rich>footer.kint-show>nav{background-position:0 50%}.kint-rich dt.kint-parent.kint-show:hover>nav,.kint-rich>footer.kint-show>nav:hover{background-position:0 75%}.kint-rich dt.kint-parent.kint-locked>nav{background-position:0 100%}.kint-rich dt.kint-parent+dd{display:none;border-left:1px dashed #d7d7d7}.kint-rich dt.kint-parent.kint-show+dd{display:block}.kint-rich var,.kint-rich var a{color:#06f;font-style:normal}.kint-rich dt:hover var,.kint-rich dt:hover var a{color:red}.kint-rich dfn{font-style:normal;font-family:monospace;color:#1d1e1e}.kint-rich pre{color:#1d1e1e;margin:0 0 0 12px;padding:5px;overflow-y:hidden;border-top:0;border:1px solid #d7d7d7;background:#f8f8f8;display:block;word-break:normal}.kint-rich .kint-popup-trigger,.kint-rich .kint-access-path-trigger,.kint-rich .kint-search-trigger{background:rgba(29,30,30,.8);border-radius:3px;height:16px;font-size:16px;margin-left:5px;font-weight:bold;width:16px;text-align:center;float:right !important;cursor:pointer;color:#f8f8f8;position:relative;overflow:hidden;line-height:17.6px}.kint-rich .kint-popup-trigger:hover,.kint-rich .kint-access-path-trigger:hover,.kint-rich .kint-search-trigger:hover{color:#1d1e1e;background:#f8f8f8}.kint-rich dt.kint-parent>.kint-popup-trigger{line-height:19.2px}.kint-rich .kint-search-trigger{font-size:20px}.kint-rich input.kint-search{display:none;border:1px solid #d7d7d7;border-top-width:0;border-bottom-width:0;padding:4px;float:right !important;margin:-4px 0;color:#1d1e1e;background:#f8f8f8;height:24px;width:160px;position:relative;z-index:100}.kint-rich input.kint-search.kint-show{display:block}.kint-rich .kint-search-root ul.kint-tabs>li:not(.kint-search-match){background:#f8f8f8;opacity:.5}.kint-rich .kint-search-root dl:not(.kint-search-match){opacity:.5}.kint-rich .kint-search-root dl:not(.kint-search-match)>dt{background:#f8f8f8}.kint-rich .kint-search-root dl:not(.kint-search-match) dl,.kint-rich .kint-search-root dl:not(.kint-search-match) ul.kint-tabs>li:not(.kint-search-match){opacity:1}.kint-rich div.access-path{background:#f8f8f8;display:none;margin-top:5px;padding:4px;white-space:pre}.kint-rich div.access-path.kint-show{display:block}.kint-rich footer{padding:0 3px 3px;font-size:9px;background:rgba(0,0,0,0)}.kint-rich footer>.kint-popup-trigger{background:rgba(0,0,0,0);color:#1d1e1e}.kint-rich footer nav{height:10px;width:10px;background-size:10px 50px}.kint-rich footer>ol{display:none;margin-left:32px}.kint-rich footer.kint-show>ol{display:block}.kint-rich a{color:#1d1e1e;text-shadow:none;text-decoration:underline}.kint-rich a:hover{color:#1d1e1e;border-bottom:1px dotted #1d1e1e}.kint-rich ul{list-style:none;padding-left:12px}.kint-rich ul:not(.kint-tabs) li{border-left:1px dashed #d7d7d7}.kint-rich ul:not(.kint-tabs) li>dl{border-left:none}.kint-rich ul.kint-tabs{margin:0 0 0 12px;padding-left:0;background:#f8f8f8;border:1px solid #d7d7d7;border-top:0}.kint-rich ul.kint-tabs>li{background:#f8f8f8;border:1px solid #d7d7d7;cursor:pointer;display:inline-block;height:24px;margin:2px;padding:0 12px;vertical-align:top}.kint-rich ul.kint-tabs>li:hover,.kint-rich ul.kint-tabs>li.kint-active-tab:hover{border-color:#aaa;color:red}.kint-rich ul.kint-tabs>li.kint-active-tab{background:#f8f8f8;border-top:0;margin-top:-1px;height:27px;line-height:24px}.kint-rich ul.kint-tabs>li:not(.kint-active-tab){line-height:20px}.kint-rich ul.kint-tabs li+li{margin-left:0}.kint-rich ul.kint-tab-contents>li{display:none}.kint-rich ul.kint-tab-contents>li.kint-show{display:block}.kint-rich dt:hover+dd>ul>li.kint-active-tab{border-color:#aaa;color:red}.kint-rich dt>.kint-color-preview{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:10px;border:1px solid #d7d7d7;background-color:#ccc;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path fill="%23FFF" d="M0 0h1v2h1V1H0z"/></svg>');background-size:100%}.kint-rich dt>.kint-color-preview:hover{border-color:#aaa}.kint-rich dt>.kint-color-preview>div{width:100%;height:100%}.kint-rich table{border-collapse:collapse;empty-cells:show;border-spacing:0}.kint-rich table *{font-size:12px}.kint-rich table dt{background:none;padding:2px}.kint-rich table dt .kint-parent{min-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kint-rich table td,.kint-rich table th{border:1px solid #d7d7d7;padding:2px;vertical-align:center}.kint-rich table th{cursor:alias}.kint-rich table td:first-child,.kint-rich table th{font-weight:bold;background:#f8f8f8;color:#1d1e1e}.kint-rich table td{background:#f8f8f8;white-space:pre}.kint-rich table td>dl{padding:0}.kint-rich table pre{border-top:0;border-right:0}.kint-rich table thead th:first-child{background:none;border:0}.kint-rich table tr:hover>td{box-shadow:0 0 1px 0 #aaa inset}.kint-rich table tr:hover var{color:red}.kint-rich table ul.kint-tabs li.kint-active-tab{height:20px;line-height:17px}.kint-rich pre.kint-source{margin-left:-1px}.kint-rich pre.kint-source[data-kint-filename]:before{display:block;content:attr(data-kint-filename);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #f8f8f8}.kint-rich pre.kint-source>div:before{display:inline-block;content:counter(kint-l);counter-increment:kint-l;border-right:1px solid #aaa;padding-right:8px;margin-right:8px}.kint-rich pre.kint-source>div.kint-highlight{background:#f8f8f8}.kint-rich .kint-microtime-lap{text-shadow:-1px 0 #aaa,0 1px #aaa,1px 0 #aaa,0 -1px #aaa;color:#f8f8f8;font-weight:bold}input.kint-note-input{width:100%}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich dt{font-weight:normal}.kint-rich dt.kint-parent{margin-top:4px}.kint-rich dl dl{margin-top:4px;padding-left:25px;border-left:none}.kint-rich>dl>dt{background:#f8f8f8}.kint-rich ul{margin:0;padding-left:0}.kint-rich ul:not(.kint-tabs)>li{border-left:0}.kint-rich ul.kint-tabs{background:#f8f8f8;border:1px solid #d7d7d7;border-width:0 1px 1px 1px;padding:4px 0 0 12px;margin-left:-1px;margin-top:-1px}.kint-rich ul.kint-tabs li,.kint-rich ul.kint-tabs li+li{margin:0 0 0 4px}.kint-rich ul.kint-tabs li{border-bottom-width:0;height:25px}.kint-rich ul.kint-tabs li:first-child{margin-left:0}.kint-rich ul.kint-tabs li.kint-active-tab{border-top:1px solid #d7d7d7;background:#fff;font-weight:bold;padding-top:0;border-bottom:1px solid #fff !important;margin-bottom:-1px}.kint-rich ul.kint-tabs li.kint-active-tab:hover{border-bottom:1px solid #fff}.kint-rich ul>li>pre{border:1px solid #d7d7d7}.kint-rich dt:hover+dd>ul{border-color:#aaa}.kint-rich pre{background:#fff;margin-top:4px;margin-left:25px}.kint-rich .kint-source{margin-left:-1px}.kint-rich .kint-source .kint-highlight{background:#cfc}.kint-rich .kint-parent.kint-show>.kint-search{border-bottom-width:1px}.kint-rich table td{background:#fff}.kint-rich table td>dl{padding:0;margin:0}.kint-rich table td>dl>dt.kint-parent{margin:0}.kint-rich table td:first-child,.kint-rich table td,.kint-rich table th{padding:2px 4px}.kint-rich table dd,.kint-rich table dt{background:#fff}.kint-rich table tr:hover>td{box-shadow:none;background:#cfc}
-</style>
+<!-- DEBUG-VIEW START 1 APPPATH/Views/neverslouch.com/pl/topr-v1/index.php --><!DOCTYPE html>
+<html>
+  <head>
+    <script async="" src="jss/fbevents.js"></script>
+    <script
+      id="debugbar_loader"
+      data-time="1713920923.073663"
+      src="http://localhost:8080/index.php?debugbar"
+    ></script>
+    <script id="debugbar_dynamic_script"></script>
+    <style id="debugbar_dynamic_style"></style>
+    <script class="kint-rich-script">
+      void 0 === window.kintShared &&
+        (window.kintShared = (function () {
+          "use strict";
+          var e = {
+            dedupe: function (e, n) {
+              return (
+                [].forEach.call(document.querySelectorAll(e), function (e) {
+                  e !== (n = n && n.ownerDocument.contains(n) ? n : e) &&
+                    e.parentNode.removeChild(e);
+                }),
+                n
+              );
+            },
+            runOnce: function (e) {
+              "complete" === document.readyState
+                ? e()
+                : window.addEventListener("load", e);
+            },
+          };
+          return (
+            window.addEventListener("click", function (e) {
+              var n;
+              e.target.classList.contains("kint-ide-link") &&
+                ((n = new XMLHttpRequest()).open("GET", e.target.href),
+                n.send(null),
+                e.preventDefault());
+            }),
+            e
+          );
+        })());
+      void 0 === window.kintRich &&
+        (window.kintRich = (function () {
+          "use strict";
+          var l = {
+            selectText: function (e) {
+              var t = window.getSelection(),
+                a = document.createRange();
+              a.selectNodeContents(e), t.removeAllRanges(), t.addRange(a);
+            },
+            toggle: function (e, t) {
+              var a = l.getChildren(e);
+              a &&
+                (e.classList.toggle("kint-show", t),
+                1 === a.childNodes.length) &&
+                (a = a.childNodes[0].childNodes[0]) &&
+                a.classList &&
+                a.classList.contains("kint-parent") &&
+                l.toggle(a, t);
+            },
+            toggleChildren: function (e, t) {
+              var a = l.getChildren(e);
+              if (a) {
+                var o = a.getElementsByClassName("kint-parent"),
+                  s = o.length;
+                for (
+                  void 0 === t && (t = e.classList.contains("kint-show"));
+                  s--;
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>10 Key Reasons You Need This Magnetic Posture Corrector Today!</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+                )
+                  l.toggle(o[s], t);
+              }
+            },
+            switchTab: function (e) {
+              var t = e.previousSibling,
+                a = 0;
+              for (
+                e.parentNode
+                  .getElementsByClassName("kint-active-tab")[0]
+                  .classList.remove("kint-active-tab"),
+                  e.classList.add("kint-active-tab");
+                t;
 
-<link rel="stylesheet" type="text/css" href="csss/style.css">
-<script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-NMS6T5CL");
-  </script>
-<script type="text/javascript">
-function getDate(days) {      
-	var monthNames = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-	var dayNames = new Array("Sun","Mon","Tue","Wed","Thur","Fri","Sat");    
-	var now = new Date();   
-	now.setDate(now.getDate() + days);   
-	var nowString =  monthNames[now.getMonth()] + " " +  now.getDate() + ", " + now.getFullYear();   
-	document.write(nowString); 
-	}
-</script>
-<script>
-    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '365134472824947');fbq('init', '299976103087149'); 
-    fbq('track', 'PageView');
-</script>
-</head>
+              )
+                1 === t.nodeType && a++, (t = t.previousSibling);
+              for (
+                var o = e.parentNode.nextSibling.childNodes, s = 0;
+                s < o.length;
+                s++
+              )
+                s === a
+                  ? (o[s].classList.add("kint-show"),
+                    1 === o[s].childNodes.length &&
+                      (t = o[s].childNodes[0].childNodes[0]) &&
+                      t.classList &&
+                      t.classList.contains("kint-parent") &&
+                      l.toggle(t, !0))
+                  : o[s].classList.remove("kint-show");
+            },
+            mktag: function (e) {
+              return "<" + e + ">";
+            },
+            openInNewWindow: function (e) {
+              var t = window.open();
+              t &&
+                (t.document.open(),
+                t.document.write(
+                  l.mktag("html") +
+                    l.mktag("head") +
+                    l.mktag("title") +
+                    "Kint (" +
+                    new Date().toISOString() +
+                    ")" +
+                    l.mktag("/title") +
+                    l.mktag('meta charset="utf-8"') +
+                    l.mktag(
+                      'script class="kint-rich-script" nonce="' +
+                        l.script.nonce +
+                        '"'
+                    ) +
+                    l.script.innerHTML +
+                    l.mktag("/script") +
+                    l.mktag(
+                      'style class="kint-rich-style" nonce="' +
+                        l.style.nonce +
+                        '"'
+                    ) +
+                    l.style.innerHTML +
+                    l.mktag("/style") +
+                    l.mktag("/head") +
+                    l.mktag("body") +
+                    '<input class="kint-note-input" placeholder="Take some notes!"><div class="kint-rich">' +
+                    e.parentNode.outerHTML +
+                    "</div>" +
+                    l.mktag("/body")
+                ),
+                t.document.close());
+            },
+            sortTable: function (e, a) {
+              var t = e.tBodies[0];
+              [].slice
+                .call(e.tBodies[0].rows)
+                .sort(function (e, t) {
+                  if (
+                    ((e = e.cells[a].textContent.trim().toLocaleLowerCase()),
+                    (t = t.cells[a].textContent.trim().toLocaleLowerCase()),
+                    isNaN(e) || isNaN(t))
+                  ) {
+                    if (isNaN(e) && !isNaN(t)) return 1;
+                    if (isNaN(t) && !isNaN(e)) return -1;
+                  } else (e = parseFloat(e)), (t = parseFloat(t));
+                  return e < t ? -1 : t < e ? 1 : 0;
+                })
+                .forEach(function (e) {
+                  t.appendChild(e);
+                });
+            },
+            showAccessPath: function (e) {
+              for (var t = e.childNodes, a = 0; a < t.length; a++)
+                if (t[a].classList && t[a].classList.contains("access-path"))
+                  return (
+                    t[a].classList.toggle("kint-show"),
+                    void (
+                      t[a].classList.contains("kint-show") && l.selectText(t[a])
+                    )
+                  );
+            },
+            showSearchBox: function (e) {
+              var t = e.querySelector(".kint-search");
+              t &&
+                (t.classList.toggle("kint-show"),
+                t.classList.contains("kint-show")
+                  ? (e.classList.add("kint-show"),
+                    t.focus(),
+                    t.select(),
+                    l.search(e.parentNode, t.value))
+                  : e.parentNode.classList.remove("kint-search-root"));
+            },
+            search: function (e, t) {
+              e.querySelectorAll(".kint-search-match").forEach(function (e) {
+                e.classList.remove("kint-search-match");
+              }),
+                e.classList.remove("kint-search-match"),
+                e.classList.toggle("kint-search-root", t.length),
+                t.length && l.findMatches(e, t);
+            },
+            findMatches: function (e, t) {
+              var a,
+                o,
+                s,
+                n = e.cloneNode(!0);
+              if (
+                (n.querySelectorAll(".access-path").forEach(function (e) {
+                  e.remove();
+                }),
+                -1 != n.textContent.toUpperCase().indexOf(t.toUpperCase()))
+              ) {
+                for (r in (e.classList.add("kint-search-match"), e.childNodes))
+                  if ("DD" == e.childNodes[r].tagName) {
+                    a = e.childNodes[r];
+                    break;
+                  }
+                if (a)
+                  if (
+                    ([].forEach.call(a.childNodes, function (e) {
+                      "DL" == e.tagName
+                        ? l.findMatches(e, t)
+                        : "UL" == e.tagName &&
+                          (e.classList.contains("kint-tabs")
+                            ? (o = e.childNodes)
+                            : e.classList.contains("kint-tab-contents") &&
+                              (s = e.childNodes));
+                    }),
+                    o && s && o.length == s.length)
+                  )
+                    for (var r = 0; r < o.length; r++) {
+                      var i = !1;
+                      (i =
+                        -1 !=
+                          o[r].textContent
+                            .toUpperCase()
+                            .indexOf(t.toUpperCase()) ||
+                        ((n = s[r].cloneNode(!0))
+                          .querySelectorAll(".access-path")
+                          .forEach(function (e) {
+                            e.remove();
+                          }),
+                        -1 !=
+                          n.textContent.toUpperCase().indexOf(t.toUpperCase()))
+                          ? !0
+                          : i) &&
+                        (o[r].classList.add("kint-search-match"),
+                        [].forEach.call(s[r].childNodes, function (e) {
+                          "DL" == e.tagName && l.findMatches(e, t);
+                        }));
+                    }
+              }
+            },
+            getParentByClass: function (e, t) {
+              for (;;) {
+                if (!(e = e.parentNode) || !e.classList || e === document)
+                  return null;
+                if (e.classList.contains(t)) return e;
+              }
+              return null;
+            },
+            getParentHeader: function (e, t) {
+              for (
+                var a = e.nodeName.toLowerCase();
+                "dd" !== a && "dt" !== a && l.getParentByClass(e, "kint-rich");
 
-<body>
+              )
+                a = (e = e.parentNode).nodeName.toLowerCase();
+              return l.getParentByClass(e, "kint-rich")
+                ? (e = "dd" === a && t ? e.previousElementSibling : e) &&
+                  "dt" === e.nodeName.toLowerCase() &&
+                  e.classList.contains("kint-parent")
+                  ? e
+                  : void 0
+                : null;
+            },
+            getChildren: function (e) {
+              for (
+                ;
+                (e = e.nextElementSibling) && "dd" !== e.nodeName.toLowerCase();
+
+              );
+              return e;
+            },
+            isFolderOpen: function () {
+              if (l.folder && l.folder.querySelector("dd.kint-foldout"))
+                return l.folder
+                  .querySelector("dd.kint-foldout")
+                  .previousSibling.classList.contains("kint-show");
+            },
+            initLoad: function () {
+              (l.style = window.kintShared.dedupe(
+                "style.kint-rich-style",
+                l.style
+              )),
+                (l.script = window.kintShared.dedupe(
+                  "script.kint-rich-script",
+                  l.script
+                )),
+                (l.folder = window.kintShared.dedupe(
+                  ".kint-rich.kint-folder",
+                  l.folder
+                ));
+              var t,
+                e = document.querySelectorAll("input.kint-search");
+              [].forEach.call(e, function (t) {
+                function e(e) {
+                  window.clearTimeout(a),
+                    t.value !== o &&
+                      (a = window.setTimeout(function () {
+                        (o = t.value), l.search(t.parentNode.parentNode, o);
+                      }, 500));
+                }
+                var a = null,
+                  o = null;
+                t.removeEventListener("keyup", e),
+                  t.addEventListener("keyup", e);
+              }),
+                l.folder &&
+                  ((t = l.folder.querySelector("dd")),
+                  [].forEach.call(
+                    document.querySelectorAll(".kint-rich.kint-file"),
+                    function (e) {
+                      e.parentNode !== l.folder && t.appendChild(e);
+                    }
+                  ),
+                  document.body.appendChild(l.folder),
+                  l.folder.classList.add("kint-show"));
+            },
+            keyboardNav: {
+              targets: [],
+              target: 0,
+              active: !1,
+              fetchTargets: function () {
+                var e = l.keyboardNav.targets[l.keyboardNav.target];
+                (l.keyboardNav.targets = []),
+                  document
+                    .querySelectorAll(
+                      ".kint-rich nav, .kint-tabs>li:not(.kint-active-tab)"
+                    )
+                    .forEach(function (e) {
+                      (l.isFolderOpen() && !l.folder.contains(e)) ||
+                        (0 === e.offsetWidth && 0 === e.offsetHeight) ||
+                        l.keyboardNav.targets.push(e);
+                    }),
+                  e &&
+                    -1 !== l.keyboardNav.targets.indexOf(e) &&
+                    (l.keyboardNav.target = l.keyboardNav.targets.indexOf(e));
+              },
+              sync: function (e) {
+                var t = document.querySelector(".kint-focused");
+                t && t.classList.remove("kint-focused"),
+                  l.keyboardNav.active &&
+                    ((t =
+                      l.keyboardNav.targets[
+                        l.keyboardNav.target
+                      ]).classList.add("kint-focused"),
+                    e || l.keyboardNav.scroll(t));
+              },
+              scroll: function (e) {
+                var t, a;
+                (l.folder && e === l.folder.querySelector("dt > nav")) ||
+                  ((e = (t = function (e) {
+                    return (
+                      e.offsetTop + (e.offsetParent ? t(e.offsetParent) : 0)
+                    );
+                  })(e)),
+                  l.isFolderOpen()
+                    ? (a = l.folder.querySelector("dd.kint-foldout")).scrollTo(
+                        0,
+                        e - a.clientHeight / 2
+                      )
+                    : window.scrollTo(0, e - window.innerHeight / 2));
+              },
+              moveCursor: function (e) {
+                for (l.keyboardNav.target += e; l.keyboardNav.target < 0; )
+                  l.keyboardNav.target += l.keyboardNav.targets.length;
+                for (; l.keyboardNav.target >= l.keyboardNav.targets.length; )
+                  l.keyboardNav.target -= l.keyboardNav.targets.length;
+                l.keyboardNav.sync();
+              },
+              setCursor: function (e) {
+                if (!l.isFolderOpen() || l.folder.contains(e)) {
+                  l.keyboardNav.fetchTargets();
+                  for (var t = 0; t < l.keyboardNav.targets.length; t++)
+                    if (e === l.keyboardNav.targets[t])
+                      return (l.keyboardNav.target = t), !0;
+                }
+                return !1;
+              },
+            },
+            mouseNav: {
+              lastClickTarget: null,
+              lastClickTimer: null,
+              lastClickCount: 0,
+              renewLastClick: function () {
+                window.clearTimeout(l.mouseNav.lastClickTimer),
+                  (l.mouseNav.lastClickTimer = window.setTimeout(function () {
+                    (l.mouseNav.lastClickTarget = null),
+                      (l.mouseNav.lastClickTimer = null),
+                      (l.mouseNav.lastClickCount = 0);
+                  }, 250));
+              },
+            },
+            style: null,
+            script: null,
+            folder: null,
+          };
+          return (
+            window.addEventListener(
+              "click",
+              function (e) {
+                var t = e.target;
+                if (
+                  l.mouseNav.lastClickTarget &&
+                  l.mouseNav.lastClickTimer &&
+                  l.mouseNav.lastClickCount
+                )
+                  if (
+                    ((t = l.mouseNav.lastClickTarget),
+                    1 === l.mouseNav.lastClickCount)
+                  )
+                    l.toggleChildren(t.parentNode),
+                      l.keyboardNav.setCursor(t),
+                      l.keyboardNav.sync(!0),
+                      l.mouseNav.lastClickCount++,
+                      l.mouseNav.renewLastClick();
+                  else {
+                    for (
+                      var a = t.parentNode.classList.contains("kint-show"),
+                        o = document.getElementsByClassName("kint-parent"),
+                        s = o.length;
+                      s--;
+
+                    )
+                      l.toggle(o[s], a);
+                    l.keyboardNav.setCursor(t),
+                      l.keyboardNav.sync(!0),
+                      l.keyboardNav.scroll(t),
+                      window.clearTimeout(l.mouseNav.lastClickTimer),
+                      (l.mouseNav.lastClickTarget = null),
+                      (l.mouseNav.lastClickTarget = null),
+                      (l.mouseNav.lastClickCount = 0);
+                  }
+                else if (l.getParentByClass(t, "kint-rich")) {
+                  var n = t.nodeName.toLowerCase();
+                  if (("dfn" === n && l.selectText(t), "th" === n))
+                    e.ctrlKey ||
+                      l.sortTable(
+                        t.parentNode.parentNode.parentNode,
+                        t.cellIndex
+                      );
+                  else if (
+                    ((t = l.getParentHeader(t)) &&
+                      (l.keyboardNav.setCursor(t.querySelector("nav")),
+                      l.keyboardNav.sync(!0)),
+                    (t = e.target),
+                    "li" === n && "kint-tabs" === t.parentNode.className)
+                  )
+                    "kint-active-tab" !== t.className && l.switchTab(t),
+                      (t = l.getParentHeader(t, !0)) &&
+                        (l.keyboardNav.setCursor(t.querySelector("nav")),
+                        l.keyboardNav.sync(!0));
+                  else if ("nav" === n)
+                    "footer" === t.parentNode.nodeName.toLowerCase()
+                      ? (l.keyboardNav.setCursor(t),
+                        l.keyboardNav.sync(!0),
+                        (t = t.parentNode).classList.toggle("kint-show"))
+                      : (l.toggle(t.parentNode),
+                        l.keyboardNav.fetchTargets(),
+                        (l.mouseNav.lastClickCount = 1),
+                        (l.mouseNav.lastClickTarget = t),
+                        l.mouseNav.renewLastClick());
+                  else if (t.classList.contains("kint-popup-trigger")) {
+                    var r = t.parentNode;
+                    if ("footer" === r.nodeName.toLowerCase())
+                      r = r.previousSibling;
+                    else
+                      for (; r && !r.classList.contains("kint-parent"); )
+                        r = r.parentNode;
+                    l.openInNewWindow(r);
+                  } else
+                    t.classList.contains("kint-access-path-trigger")
+                      ? l.showAccessPath(t.parentNode)
+                      : t.classList.contains("kint-search-trigger")
+                      ? l.showSearchBox(t.parentNode)
+                      : t.classList.contains("kint-search") ||
+                        ("pre" === n && 3 === e.detail
+                          ? l.selectText(t)
+                          : l.getParentByClass(t, "kint-source") &&
+                            3 === e.detail
+                          ? l.selectText(l.getParentByClass(t, "kint-source"))
+                          : t.classList.contains("access-path")
+                          ? l.selectText(t)
+                          : "a" !== n &&
+                            (t = l.getParentHeader(t)) &&
+                            (l.toggle(t), l.keyboardNav.fetchTargets()));
+                }
+              },
+              !0
+            ),
+            window.addEventListener(
+              "keydown",
+              function (e) {
+                if (e.target === document.body && !e.altKey && !e.ctrlKey)
+                  if (68 === e.keyCode) {
+                    if (l.keyboardNav.active) l.keyboardNav.active = !1;
+                    else if (
+                      ((l.keyboardNav.active = !0),
+                      l.keyboardNav.fetchTargets(),
+                      0 === l.keyboardNav.targets.length)
+                    )
+                      return void (l.keyboardNav.active = !1);
+                    l.keyboardNav.sync(), e.preventDefault();
+                  } else if (l.keyboardNav.active)
+                    if (9 === e.keyCode)
+                      l.keyboardNav.moveCursor(e.shiftKey ? -1 : 1),
+                        e.preventDefault();
+                    else if (38 === e.keyCode || 75 === e.keyCode)
+                      l.keyboardNav.moveCursor(-1), e.preventDefault();
+                    else if (40 === e.keyCode || 74 === e.keyCode)
+                      l.keyboardNav.moveCursor(1), e.preventDefault();
+                    else {
+                      var t,
+                        a,
+                        o = l.keyboardNav.targets[l.keyboardNav.target];
+                      if ("li" === o.nodeName.toLowerCase()) {
+                        if (32 === e.keyCode || 13 === e.keyCode)
+                          return (
+                            l.switchTab(o),
+                            l.keyboardNav.fetchTargets(),
+                            l.keyboardNav.sync(),
+                            void e.preventDefault()
+                          );
+                        if (39 === e.keyCode || 76 === e.keyCode)
+                          return (
+                            l.keyboardNav.moveCursor(1), void e.preventDefault()
+                          );
+                        if (37 === e.keyCode || 72 === e.keyCode)
+                          return (
+                            l.keyboardNav.moveCursor(-1),
+                            void e.preventDefault()
+                          );
+                      }
+                      (o = o.parentNode),
+                        65 === e.keyCode
+                          ? (l.showAccessPath(o), e.preventDefault())
+                          : "footer" === o.nodeName.toLowerCase() &&
+                            o.parentNode.classList.contains("kint-rich")
+                          ? 32 === e.keyCode || 13 === e.keyCode
+                            ? (o.classList.toggle("kint-show"),
+                              e.preventDefault())
+                            : 37 === e.keyCode || 72 === e.keyCode
+                            ? (o.classList.remove("kint-show"),
+                              e.preventDefault())
+                            : (39 !== e.keyCode && 76 !== e.keyCode) ||
+                              (o.classList.add("kint-show"), e.preventDefault())
+                          : 32 === e.keyCode || 13 === e.keyCode
+                          ? (l.toggle(o),
+                            l.keyboardNav.fetchTargets(),
+                            e.preventDefault())
+                          : (39 !== e.keyCode &&
+                              76 !== e.keyCode &&
+                              37 !== e.keyCode &&
+                              72 !== e.keyCode) ||
+                            ((t = 39 === e.keyCode || 76 === e.keyCode),
+                            o.classList.contains("kint-show")
+                              ? l.toggleChildren(o, t)
+                              : t ||
+                                ((a = l.getParentHeader(
+                                  o.parentNode.parentNode,
+                                  !0
+                                )) &&
+                                  (l.keyboardNav.setCursor(
+                                    (o = a).querySelector("nav")
+                                  ),
+                                  l.keyboardNav.sync())),
+                            l.toggle(o, t),
+                            l.keyboardNav.fetchTargets(),
+                            e.preventDefault());
+                    }
+              },
+              !0
+            ),
+            l
+          );
+        })()),
+        window.kintShared.runOnce(window.kintRich.initLoad);
+      void 0 === window.kintMicrotimeInitialized &&
+        ((window.kintMicrotimeInitialized = 1),
+        window.addEventListener("load", function () {
+          "use strict";
+          var a = {},
+            t = Array.prototype.slice.call(
+              document.querySelectorAll("[data-kint-microtime-group]"),
+              0
+            );
+          t.forEach(function (t) {
+            var i, e;
+            t.querySelector(".kint-microtime-lap") &&
+              ((i = t.getAttribute("data-kint-microtime-group")),
+              (e = parseFloat(
+                t.querySelector(".kint-microtime-lap").innerHTML
+              )),
+              (t = parseFloat(
+                t.querySelector(".kint-microtime-avg").innerHTML
+              )),
+              void 0 === a[i] && (a[i] = {}),
+              (void 0 === a[i].min || a[i].min > e) && (a[i].min = e),
+              (void 0 === a[i].max || a[i].max < e) && (a[i].max = e),
+              (a[i].avg = t));
+          }),
+            t.forEach(function (t) {
+              var i,
+                e,
+                r,
+                o,
+                n = t.querySelector(".kint-microtime-lap");
+              null !== n &&
+                ((i = parseFloat(n.textContent)),
+                (o = t.dataset.kintMicrotimeGroup),
+                (e = a[o].avg),
+                (r = a[o].max),
+                (o = a[o].min),
+                i !==
+                  (t.querySelector(".kint-microtime-avg").textContent = e) ||
+                  i !== o ||
+                  i !== r) &&
+                (n.style.background =
+                  e < i
+                    ? "hsl(" + (40 - 40 * ((i - e) / (r - e))) + ", 100%, 65%)"
+                    : "hsl(" +
+                      (40 + 80 * (e === o ? 0 : (e - i) / (e - o))) +
+                      ", 100%, 65%)");
+            });
+        }));
+    </script>
+    <style class="kint-rich-style">
+      .kint-rich {
+        font-size: 13px;
+        overflow-x: auto;
+        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .kint-rich.kint-folder {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999999;
+        width: 100%;
+        margin: 0;
+        display: block;
+      }
+      .kint-rich.kint-folder dd.kint-foldout {
+        max-height: calc(100vh - 100px);
+        padding-right: 8px;
+        overflow-y: scroll;
+        display: none;
+      }
+      .kint-rich.kint-folder dd.kint-foldout.kint-show {
+        display: block;
+      }
+      .kint-rich::selection,
+      .kint-rich::-moz-selection,
+      .kint-rich::-webkit-selection {
+        background: #aaa;
+        color: #1d1e1e;
+      }
+      .kint-rich .kint-focused {
+        box-shadow: 0 0 3px 2px red;
+      }
+      .kint-rich,
+      .kint-rich::before,
+      .kint-rich::after,
+      .kint-rich *,
+      .kint-rich *::before,
+      .kint-rich *::after {
+        box-sizing: border-box;
+        border-radius: 0;
+        color: #1d1e1e;
+        float: none !important;
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+          serif;
+        line-height: 15px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      .kint-rich {
+        margin: 8px 0;
+      }
+      .kint-rich dt,
+      .kint-rich dl {
+        width: auto;
+      }
+      .kint-rich dt,
+      .kint-rich div.access-path {
+        background: #f8f8f8;
+        border: 1px solid #d7d7d7;
+        color: #1d1e1e;
+        display: block;
+        font-weight: bold;
+        list-style: none outside none;
+        overflow: auto;
+        padding: 4px;
+      }
+      .kint-rich dt:hover,
+      .kint-rich div.access-path:hover {
+        border-color: #aaa;
+      }
+      .kint-rich > dl dl {
+        padding: 0 0 0 12px;
+      }
+      .kint-rich dt.kint-parent > nav,
+      .kint-rich > footer > nav {
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNTAiPjxwYXRoIGQ9Ik02IDdoMThsLTkgMTV6bTAgMzBoMThsLTkgMTV6bTAgNDVoMThsLTktMTV6bTAgMzBoMThsLTktMTV6bTAgMTJsMTggMThtLTE4IDBsMTgtMTgiIGZpbGw9IiM1NTUiLz48cGF0aCBkPSJNNiAxMjZsMTggMThtLTE4IDBsMTgtMTgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjNTU1Ii8+PC9zdmc+")
+          no-repeat scroll 0 0/15px 75px rgba(0, 0, 0, 0);
+        cursor: pointer;
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin-right: 3px;
+        vertical-align: middle;
+      }
+      .kint-rich dt.kint-parent:hover > nav,
+      .kint-rich > footer > nav:hover {
+        background-position: 0 25%;
+      }
+      .kint-rich dt.kint-parent.kint-show > nav,
+      .kint-rich > footer.kint-show > nav {
+        background-position: 0 50%;
+      }
+      .kint-rich dt.kint-parent.kint-show:hover > nav,
+      .kint-rich > footer.kint-show > nav:hover {
+        background-position: 0 75%;
+      }
+      .kint-rich dt.kint-parent.kint-locked > nav {
+        background-position: 0 100%;
+      }
+      .kint-rich dt.kint-parent + dd {
+        display: none;
+        border-left: 1px dashed #d7d7d7;
+      }
+      .kint-rich dt.kint-parent.kint-show + dd {
+        display: block;
+      }
+      .kint-rich var,
+      .kint-rich var a {
+        color: #06f;
+        font-style: normal;
+      }
+      .kint-rich dt:hover var,
+      .kint-rich dt:hover var a {
+        color: red;
+      }
+      .kint-rich dfn {
+        font-style: normal;
+        font-family: monospace;
+        color: #1d1e1e;
+      }
+      .kint-rich pre {
+        color: #1d1e1e;
+        margin: 0 0 0 12px;
+        padding: 5px;
+        overflow-y: hidden;
+        border-top: 0;
+        border: 1px solid #d7d7d7;
+        background: #f8f8f8;
+        display: block;
+        word-break: normal;
+      }
+      .kint-rich .kint-popup-trigger,
+      .kint-rich .kint-access-path-trigger,
+      .kint-rich .kint-search-trigger {
+        background: rgba(29, 30, 30, 0.8);
+        border-radius: 3px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: 5px;
+        font-weight: bold;
+        width: 16px;
+        text-align: center;
+        float: right !important;
+        cursor: pointer;
+        color: #f8f8f8;
+        position: relative;
+        overflow: hidden;
+        line-height: 17.6px;
+      }
+      .kint-rich .kint-popup-trigger:hover,
+      .kint-rich .kint-access-path-trigger:hover,
+      .kint-rich .kint-search-trigger:hover {
+        color: #1d1e1e;
+        background: #f8f8f8;
+      }
+      .kint-rich dt.kint-parent > .kint-popup-trigger {
+        line-height: 19.2px;
+      }
+      .kint-rich .kint-search-trigger {
+        font-size: 20px;
+      }
+      .kint-rich input.kint-search {
+        display: none;
+        border: 1px solid #d7d7d7;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        padding: 4px;
+        float: right !important;
+        margin: -4px 0;
+        color: #1d1e1e;
+        background: #f8f8f8;
+        height: 24px;
+        width: 160px;
+        position: relative;
+        z-index: 100;
+      }
+      .kint-rich input.kint-search.kint-show {
+        display: block;
+      }
+      .kint-rich .kint-search-root ul.kint-tabs > li:not(.kint-search-match) {
+        background: #f8f8f8;
+        opacity: 0.5;
+      }
+      .kint-rich .kint-search-root dl:not(.kint-search-match) {
+        opacity: 0.5;
+      }
+      .kint-rich .kint-search-root dl:not(.kint-search-match) > dt {
+        background: #f8f8f8;
+      }
+      .kint-rich .kint-search-root dl:not(.kint-search-match) dl,
+      .kint-rich
+        .kint-search-root
+        dl:not(.kint-search-match)
+        ul.kint-tabs
+        > li:not(.kint-search-match) {
+        opacity: 1;
+      }
+      .kint-rich div.access-path {
+        background: #f8f8f8;
+        display: none;
+        margin-top: 5px;
+        padding: 4px;
+        white-space: pre;
+      }
+      .kint-rich div.access-path.kint-show {
+        display: block;
+      }
+      .kint-rich footer {
+        padding: 0 3px 3px;
+        font-size: 9px;
+        background: rgba(0, 0, 0, 0);
+      }
+      .kint-rich footer > .kint-popup-trigger {
+        background: rgba(0, 0, 0, 0);
+        color: #1d1e1e;
+      }
+      .kint-rich footer nav {
+        height: 10px;
+        width: 10px;
+        background-size: 10px 50px;
+      }
+      .kint-rich footer > ol {
+        display: none;
+        margin-left: 32px;
+      }
+      .kint-rich footer.kint-show > ol {
+        display: block;
+      }
+      .kint-rich a {
+        color: #1d1e1e;
+        text-shadow: none;
+        text-decoration: underline;
+      }
+      .kint-rich a:hover {
+        color: #1d1e1e;
+        border-bottom: 1px dotted #1d1e1e;
+      }
+      .kint-rich ul {
+        list-style: none;
+        padding-left: 12px;
+      }
+      .kint-rich ul:not(.kint-tabs) li {
+        border-left: 1px dashed #d7d7d7;
+      }
+      .kint-rich ul:not(.kint-tabs) li > dl {
+        border-left: none;
+      }
+      .kint-rich ul.kint-tabs {
+        margin: 0 0 0 12px;
+        padding-left: 0;
+        background: #f8f8f8;
+        border: 1px solid #d7d7d7;
+        border-top: 0;
+      }
+      .kint-rich ul.kint-tabs > li {
+        background: #f8f8f8;
+        border: 1px solid #d7d7d7;
+        cursor: pointer;
+        display: inline-block;
+        height: 24px;
+        margin: 2px;
+        padding: 0 12px;
+        vertical-align: top;
+      }
+      .kint-rich ul.kint-tabs > li:hover,
+      .kint-rich ul.kint-tabs > li.kint-active-tab:hover {
+        border-color: #aaa;
+        color: red;
+      }
+      .kint-rich ul.kint-tabs > li.kint-active-tab {
+        background: #f8f8f8;
+        border-top: 0;
+        margin-top: -1px;
+        height: 27px;
+        line-height: 24px;
+      }
+      .kint-rich ul.kint-tabs > li:not(.kint-active-tab) {
+        line-height: 20px;
+      }
+      .kint-rich ul.kint-tabs li + li {
+        margin-left: 0;
+      }
+      .kint-rich ul.kint-tab-contents > li {
+        display: none;
+      }
+      .kint-rich ul.kint-tab-contents > li.kint-show {
+        display: block;
+      }
+      .kint-rich dt:hover + dd > ul > li.kint-active-tab {
+        border-color: #aaa;
+        color: red;
+      }
+      .kint-rich dt > .kint-color-preview {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        border: 1px solid #d7d7d7;
+        background-color: #ccc;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path fill="%23FFF" d="M0 0h1v2h1V1H0z"/></svg>');
+        background-size: 100%;
+      }
+      .kint-rich dt > .kint-color-preview:hover {
+        border-color: #aaa;
+      }
+      .kint-rich dt > .kint-color-preview > div {
+        width: 100%;
+        height: 100%;
+      }
+      .kint-rich table {
+        border-collapse: collapse;
+        empty-cells: show;
+        border-spacing: 0;
+      }
+      .kint-rich table * {
+        font-size: 12px;
+      }
+      .kint-rich table dt {
+        background: none;
+        padding: 2px;
+      }
+      .kint-rich table dt .kint-parent {
+        min-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .kint-rich table td,
+      .kint-rich table th {
+        border: 1px solid #d7d7d7;
+        padding: 2px;
+        vertical-align: center;
+      }
+      .kint-rich table th {
+        cursor: alias;
+      }
+      .kint-rich table td:first-child,
+      .kint-rich table th {
+        font-weight: bold;
+        background: #f8f8f8;
+        color: #1d1e1e;
+      }
+      .kint-rich table td {
+        background: #f8f8f8;
+        white-space: pre;
+      }
+      .kint-rich table td > dl {
+        padding: 0;
+      }
+      .kint-rich table pre {
+        border-top: 0;
+        border-right: 0;
+      }
+      .kint-rich table thead th:first-child {
+        background: none;
+        border: 0;
+      }
+      .kint-rich table tr:hover > td {
+        box-shadow: 0 0 1px 0 #aaa inset;
+      }
+      .kint-rich table tr:hover var {
+        color: red;
+      }
+      .kint-rich table ul.kint-tabs li.kint-active-tab {
+        height: 20px;
+        line-height: 17px;
+      }
+      .kint-rich pre.kint-source {
+        margin-left: -1px;
+      }
+      .kint-rich pre.kint-source[data-kint-filename]:before {
+        display: block;
+        content: attr(data-kint-filename);
+        margin-bottom: 4px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #f8f8f8;
+      }
+      .kint-rich pre.kint-source > div:before {
+        display: inline-block;
+        content: counter(kint-l);
+        counter-increment: kint-l;
+        border-right: 1px solid #aaa;
+        padding-right: 8px;
+        margin-right: 8px;
+      }
+      .kint-rich pre.kint-source > div.kint-highlight {
+        background: #f8f8f8;
+      }
+      .kint-rich .kint-microtime-lap {
+        text-shadow: -1px 0 #aaa, 0 1px #aaa, 1px 0 #aaa, 0 -1px #aaa;
+        color: #f8f8f8;
+        font-weight: bold;
+      }
+      input.kint-note-input {
+        width: 100%;
+      }
+      .kint-rich .kint-focused {
+        box-shadow: 0 0 3px 2px red;
+      }
+      .kint-rich dt {
+        font-weight: normal;
+      }
+      .kint-rich dt.kint-parent {
+        margin-top: 4px;
+      }
+      .kint-rich dl dl {
+        margin-top: 4px;
+        padding-left: 25px;
+        border-left: none;
+      }
+      .kint-rich > dl > dt {
+        background: #f8f8f8;
+      }
+      .kint-rich ul {
+        margin: 0;
+        padding-left: 0;
+      }
+      .kint-rich ul:not(.kint-tabs) > li {
+        border-left: 0;
+      }
+      .kint-rich ul.kint-tabs {
+        background: #f8f8f8;
+        border: 1px solid #d7d7d7;
+        border-width: 0 1px 1px 1px;
+        padding: 4px 0 0 12px;
+        margin-left: -1px;
+        margin-top: -1px;
+      }
+      .kint-rich ul.kint-tabs li,
+      .kint-rich ul.kint-tabs li + li {
+        margin: 0 0 0 4px;
+      }
+      .kint-rich ul.kint-tabs li {
+        border-bottom-width: 0;
+        height: 25px;
+      }
+      .kint-rich ul.kint-tabs li:first-child {
+        margin-left: 0;
+      }
+      .kint-rich ul.kint-tabs li.kint-active-tab {
+        border-top: 1px solid #d7d7d7;
+        background: #fff;
+        font-weight: bold;
+        padding-top: 0;
+        border-bottom: 1px solid #fff !important;
+        margin-bottom: -1px;
+      }
+      .kint-rich ul.kint-tabs li.kint-active-tab:hover {
+        border-bottom: 1px solid #fff;
+      }
+      .kint-rich ul > li > pre {
+        border: 1px solid #d7d7d7;
+      }
+      .kint-rich dt:hover + dd > ul {
+        border-color: #aaa;
+      }
+      .kint-rich pre {
+        background: #fff;
+        margin-top: 4px;
+        margin-left: 25px;
+      }
+      .kint-rich .kint-source {
+        margin-left: -1px;
+      }
+      .kint-rich .kint-source .kint-highlight {
+        background: #cfc;
+      }
+      .kint-rich .kint-parent.kint-show > .kint-search {
+        border-bottom-width: 1px;
+      }
+      .kint-rich table td {
+        background: #fff;
+      }
+      .kint-rich table td > dl {
+        padding: 0;
+        margin: 0;
+      }
+      .kint-rich table td > dl > dt.kint-parent {
+        margin: 0;
+      }
+      .kint-rich table td:first-child,
+      .kint-rich table td,
+      .kint-rich table th {
+        padding: 2px 4px;
+      }
+      .kint-rich table dd,
+      .kint-rich table dt {
+        background: #fff;
+      }
+      .kint-rich table tr:hover > td {
+        box-shadow: none;
+        background: #cfc;
+      }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>
+      10 Key Reasons You Need This Magnetic Posture Corrector Today!
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="csss/style.css" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NMS6T5CL");
+    </script>
+    <script type="text/javascript">
+      function getDate(days) {
+        var monthNames = new Array(
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        );
+        var dayNames = new Array(
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thur",
+          "Fri",
+          "Sat"
+        );
+        var now = new Date();
+        now.setDate(now.getDate() + days);
+        var nowString =
+          monthNames[now.getMonth()] +
+          " " +
+          now.getDate() +
+          ", " +
+          now.getFullYear();
+        document.write(nowString);
+      }
+    </script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "365134472824947");
+      fbq("init", "299976103087149");
+      fbq("track", "PageView");
+    </script>
+  </head>
+
+  <body>
     <noscript
-    ><iframe
-      src="www.google.com"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe
-  ></noscript>
-<div class="top-fix-bar">
-    <div class="top-strip">
+      ><iframe
+        src="www.google.com"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <div class="top-fix-bar">
+      <div class="top-strip">
         <div class="container">
-            <p class="top-strip-txt"><u>OFFER ENDS IN </u><img src="imagess/clock-img.png" width="20" height="20" alt="clock-img"><span id="listicle-count"></span></p>
+          <p class="top-strip-txt">
+            <u>OFFER ENDS IN </u
+            ><img
+              src="imagess/clock-img.png"
+              width="20"
+              height="20"
+              alt="clock-img"
+            /><span id="listicle-count"></span>
+          </p>
         </div>
+      </div>
     </div>
-</div>
 
-<div class="main-section">
-	<div class="container">
-    
-    	<div class="main-content">
-          	<p class="rev-text"><img src="imagess/rev-star.png"> Health and productivity</p>
-            <p class="main-heading">10 Key Reasons You Need This Magnetic Posture Corrector Today!</p>
-			<div class="smry-txt">
-            <p>Sedentary lifestyle give more problems than benefits according to recent clinical researches and 95% of it's problems link to a poor posture, but no need to worry - the new Magnetic Posture Corrector – a groundbreaking remedy for prevalent back problems and poor posture is here to save you all.</p>   
+    <div class="main-section">
+      <div class="container">
+        <div class="main-content">
+          <p class="rev-text">
+            <img src="imagess/rev-star.png" /> Health and productivity
+          </p>
+          <p class="main-heading">
+            10 Key Reasons You Need This Magnetic Posture Corrector Today!
+          </p>
+          <div class="smry-txt">
+            <p>
+              Sedentary lifestyle give more problems than benefits according to
+              recent clinical researches and 95% of it's problems link to a poor
+              posture, but no need to worry - the new Magnetic Posture Corrector
+              – a groundbreaking remedy for prevalent back problems and poor
+              posture is here to save you all.
+            </p>
             <p>Here's why it's an absolute necessity:</p>
-			</div>
+          </div>
         </div>
-     
+
         <div class="s1-box-out">
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/Surpdew-Neck-Massager-Easy-To-Charge-Long-Battery-Life-Portable-Hot-Cervical-Spine-9-Massage-Modes-Suitable-For-Home-Office-Business-Travelling-White_4e09381d-2535-4ed4-9da3-fdc.webp" width="385" height="383" alt="s1-img1" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">1.Quick Posture Correction</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/Surpdew-Neck-Massager-Easy-To-Charge-Long-Battery-Life-Portable-Hot-Cervical-Spine-9-Massage-Modes-Suitable-For-Home-Office-Business-Travelling-White_4e09381d-2535-4ed4-9da3-fdc.webp" width="385" height="383" alt="s1-img1" class="s1-img formob">
-                    <p class="s1-box-right-para">NeverSlouch: Magnetic Posture Corrector works efficiently to align your spine and shoulders, promoting a healthier posture almost immediately upon use.</p> 
-					   <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/holly.mp4">
-                        	<img src="imagess/44.jpg" width="104" height="104" alt="vdo-img1" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	 <p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Rajesh B.,</strong> Mumbai <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>	
-
-                            <p class="t-heading">"As a software engineer, I spend long hours sitting at my desk. This posture corrector has been a game-changer for me. It's comfortable to wear, and I've noticed a significant improvement in my posture. Highly recommend it!"</p>	
-                        </div>		
-                    </div>
-                </div>
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/Surpdew-Neck-Massager-Easy-To-Charge-Long-Battery-Life-Portable-Hot-Cervical-Spine-9-Massage-Modes-Suitable-For-Home-Office-Business-Travelling-White_4e09381d-2535-4ed4-9da3-fdc.webp"
+                width="385"
+                height="383"
+                alt="s1-img1"
+                class="s1-img"
+              />
             </div>
 
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/61wvVKqeleL.webp" width="385" height="383" alt="s1-img2" class="s1-img">
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">1.Quick Posture Correction</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/Surpdew-Neck-Massager-Easy-To-Charge-Long-Battery-Life-Portable-Hot-Cervical-Spine-9-Massage-Modes-Suitable-For-Home-Office-Business-Travelling-White_4e09381d-2535-4ed4-9da3-fdc.webp"
+                width="385"
+                height="383"
+                alt="s1-img1"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                NeverSlouch: Magnetic Posture Corrector works efficiently to
+                align your spine and shoulders, promoting a healthier posture
+                almost immediately upon use.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/holly.mp4"
+                >
+                  <img
+                    src="imagess/44.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img1"
+                    class="vdoBtn"
+                  />
                 </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">2. Eliminates Back Pain</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/61wvVKqeleL.webp" width="385" height="383" alt="s1-img1" class="s1-img formob">
-                    <p class="s1-box-right-para">By correcting your posture, it addresses the root cause of back pain, offering significant relief and improving your quality of life.</p>
-					 <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/regina.mp4">
-                        	<img src="imagess/40.jpg" width="104" height="104" alt="vdo-img2" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	 <p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star "><strong class="semibold">Preeti S.,</strong> Bangalore <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                         	
-                            <p class="t-heading">"After having two kids, my back pain became unbearable. I was skeptical about using a posture corrector, but this one really surprised me. It's easy to wear under my clothes, and within a few weeks, I felt a noticeable difference in my posture and back pain."</p>	
-                        </div>		
-                    </div>
-					 
-                </div>
-            </div>
-            
-            <div class="s1-box show-stickey">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/s-l1600.webp" width="385" height="383" alt="s1-img3" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">3. Strengthens Spine And Back Muscles</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/s-l1600.webp" width="385" height="383" alt="s1-img3" class="s1-img formob">
-                    <p class="s1-box-right-para">Regular use of the corrector not only aligns your spine but also strengthens the muscles around it, ensuring long-term health benefits.</p>
-					   <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/megan.mp4">
-                        	<img src="imagess/41.jpg" width="104" height="104" alt="vdo-img3" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Suresh K.,</strong> New Delhi <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Rajesh B.,</strong> Mumbai
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
 
-                            <p class="t-heading">"I used to suffer from severe back pain due to long hours of sitting. This posture corrector has been a lifesaver for me. It provides great support and has significantly reduced my back pain. I feel more energetic and comfortable during my drives now.!"</p>	
-                        </div>		
-                    </div>
-					 
+                  <p class="t-heading">
+                    "As a software engineer, I spend long hours sitting at my
+                    desk. This posture corrector has been a game-changer for me.
+                    It's comfortable to wear, and I've noticed a significant
+                    improvement in my posture. Highly recommend it!"
+                  </p>
                 </div>
+              </div>
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/na-magnetic-posture-corrector-back-pain-shoulder-back-support-original-imafgqr8hjk9bjbg.webp" width="385" height="383" alt="s1-img4" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">4. Boosts General Health</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/na-magnetic-posture-corrector-back-pain-shoulder-back-support-original-imafgqr8hjk9bjbg.webp" width="385" height="383" alt="s1-img4" class="s1-img formob">
-                    <p class="s1-box-right-para">A correct posture enhances breathing, circulation, and digestion, contributing to overall well-being and vitality.</p> 
-					  <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/bill_c.mp4">
-                        	<img src="imagess/43.jpg" width="104" height="104" alt="vdo-img4" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	 <p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Smita G.,</strong> Pune <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-       
-                            <p class="t-heading">"I had tried various methods to improve my posture, but nothing seemed to work until I tried this posture corrector. It's comfortable to wear, and I've seen a visible improvement in my posture. It has become an essential part of my daily routine."</p>	
-                        </div>		
-                    </div>
-                </div>
-            </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/loqwresblackmagneticposture-scaled.jpeg" width="385" height="383" alt="s1-img5" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">5. Keeps Shoulders Straight</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/loqwresblackmagneticposture-scaled.jpeg" width="385" height="383" alt="s1-img5" class="s1-img formob">
-                    <p class="s1-box-right-para">The corrector ensures your shoulders remain in the correct position, preventing slumping and the associated discomfort.</p>
+          </div>
 
-                    <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/kelly.mp4">
-                        	<img src="imagess/46.jpg" width="104" height="104" alt="vdo-img10" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Sanjay R.,</strong> Ahmedabad <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                           
-                            <p class="t-heading">"I have always struggled with poor posture, which led to frequent backaches. Since using this posture corrector, I have noticed a remarkable improvement. It's easy to use and has helped me maintain a better posture throughout the day."</p>	
-                        </div>		
-                    </div>					
-                </div>
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/61wvVKqeleL.webp"
+                width="385"
+                height="383"
+                alt="s1-img2"
+                class="s1-img"
+              />
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/img_11.jpg" width="385" height="383" alt="s1-img6" class="s1-img">
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">2. Eliminates Back Pain</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/61wvVKqeleL.webp"
+                width="385"
+                height="383"
+                alt="s1-img1"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                By correcting your posture, it addresses the root cause of back
+                pain, offering significant relief and improving your quality of
+                life.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/regina.mp4"
+                >
+                  <img
+                    src="imagess/40.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img2"
+                    class="vdoBtn"
+                  />
                 </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">6. Improves Physical Appearance</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/img_11.jpg" width="385" height="383" alt="s1-img6" class="s1-img formob">
-                    <p class="s1-box-right-para">Standing straight with proper posture not only makes you look taller but also more confident and assertive.</p>
-					   <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/todd_j.mp4">
-                        	<img src="imagess/45.jpg" width="104" height="104" alt="vdo-img5" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Anjali M.,</strong> Kolkata <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                         
-                            <p class="t-heading">"I work in a call center, which requires me to sit for long hours. This posture corrector has been a blessing for me. It provides excellent support and has helped alleviate my back pain. I feel more confident and comfortable at work now."</p>		
-                        </div>		
-                    </div>
-					 
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Preeti S.,</strong> Bangalore
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "After having two kids, my back pain became unbearable. I
+                    was skeptical about using a posture corrector, but this one
+                    really surprised me. It's easy to wear under my clothes, and
+                    within a few weeks, I felt a noticeable difference in my
+                    posture and back pain."
+                  </p>
                 </div>
+              </div>
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/61QSrEM2t2L._AC_UF894%2C1000_QL80_.jpg" width="385" height="383" alt="s1-img7" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">7. Increases Self-Esteem</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/61QSrEM2t2L._AC_UF894%2C1000_QL80_.jpg" width="385" height="383" alt="s1-img7" class="s1-img formob">
-                    <p class="s1-box-right-para">A good posture boosts your self-esteem and confidence, making you feel more positive about yourself and your appearance.</p>
-					  <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/elizabeth_g.mp4">
-                        	<img src="imagess/49.jpg" width="104" height="104" alt="vdo-img6" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Rahul D.,</strong> Hyderabad <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                           
-                            <p class="t-heading">"I lead a busy lifestyle, which often resulted in poor posture and back pain. This posture corrector has been a game-changer for me. It's comfortable to wear and has helped me maintain a better posture effortlessly. I highly recommend it to anyone looking to improve their posture."</p>	
-                        </div>		
-                    </div>
-					 
-                </div>
+          </div>
+
+          <div class="s1-box show-stickey">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/s-l1600.webp"
+                width="385"
+                height="383"
+                alt="s1-img3"
+                class="s1-img"
+              />
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/169151680_max.jpg" width="385" height="383" alt="s1-img8" class="s1-img">
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">
+                3. Strengthens Spine And Back Muscles
+              </p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/s-l1600.webp"
+                width="385"
+                height="383"
+                alt="s1-img3"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                Regular use of the corrector not only aligns your spine but also
+                strengthens the muscles around it, ensuring long-term health
+                benefits.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/megan.mp4"
+                >
+                  <img
+                    src="imagess/41.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img3"
+                    class="vdoBtn"
+                  />
                 </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">8. Versatile And Inclusive</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/169151680_max.jpg" width="385" height="383" alt="s1-img8" class="s1-img formob">
-                    <p class="s1-box-right-para">Designed for both men and women of all ages, the corrector is effective in treating conditions like scoliosis without any contraindications.</p>
-					   <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/copper_d.mp4">
-                        	<img src="imagess/48.jpg" width="104" height="104" alt="vdo-img7" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Meena L.,</strong> Chennai <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                            
-    
-                            <p class="t-heading">"After years of neglecting my posture, I started experiencing severe back pain. This posture corrector has been a lifesaver for me. It's easy to wear and has helped alleviate my back pain significantly. I feel more confident and healthy now."</p>	
-                        </div>		
-                    </div>
-					 
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Suresh K.,</strong> New Delhi
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I used to suffer from severe back pain due to long hours of
+                    sitting. This posture corrector has been a lifesaver for me.
+                    It provides great support and has significantly reduced my
+                    back pain. I feel more energetic and comfortable during my
+                    drives now.!"
+                  </p>
                 </div>
+              </div>
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/na-posture-corrector-belt-for-men-and-women-for-back-pain-back-original-imaghjxb9mzth9zf.webp" width="385" height="383" alt="s1-img9" class="s1-img">
-                </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">9. Comfortable And Discreet</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/na-posture-corrector-belt-for-men-and-women-for-back-pain-back-original-imaghjxb9mzth9zf.webp" width="385" height="383" alt="s1-img9" class="s1-img formob">
-                    <p class="s1-box-right-para">Made from elastic and durable materials, it fits perfectly to your figure, allowing you to wear it under any clothing item discreetly and comfortably. </p>
-					 <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/tracey_k">
-                        	<img src="imagess/50.jpg" width="104" height="104" alt="vdo-img8" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Seema ,</strong> Jaipur <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                       
-                            <p class="t-heading">"I have always been conscious of my posture, but due to long hours of sitting at work, it started deteriorating. This posture corrector has helped me maintain a better posture throughout the day. It's comfortable to wear and has become an essential part of my daily routine."</p>	
-                        </div>		
-                    </div>
-					 
-                </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/na-magnetic-posture-corrector-back-pain-shoulder-back-support-original-imafgqr8hjk9bjbg.webp"
+                width="385"
+                height="383"
+                alt="s1-img4"
+                class="s1-img"
+              />
             </div>
-            
-            <div class="s1-box">
-                <div class="s1-box-left hidemob">
-                    <img src="imagess/img-1.jpg" width="385" height="383" alt="s1-img10" class="s1-img">
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">4. Boosts General Health</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/na-magnetic-posture-corrector-back-pain-shoulder-back-support-original-imafgqr8hjk9bjbg.webp"
+                width="385"
+                height="383"
+                alt="s1-img4"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                A correct posture enhances breathing, circulation, and
+                digestion, contributing to overall well-being and vitality.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/bill_c.mp4"
+                >
+                  <img
+                    src="imagess/43.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img4"
+                    class="vdoBtn"
+                  />
                 </div>
-                
-                <div class="s1-box-right">
-                    <p class="s1-box-right-heading">10. Affordable With Great Offers</p>
-                    <div class="clearall"></div>
-                    <img src="imagess/img-1.jpg" width="385" height="383" alt="s1-img10" class="s1-img formob">
-                    <p class="s1-box-right-para">Available at a discounted price of ₹1499 (originally ₹2998) and with deals like "Buy 2 Get 1 Free" and "Buy 3 Get 3 Free," it's an investment in your health that offers great value.</p>
-					  <div class="testi-box">
-                    	<div class="testi-imgbox ugc1" data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/ashleigh.mp4">
-                        	<img src="imagess/47.jpg" width="104" height="104" alt="vdo-img9" class="vdoBtn">
-                        </div>
-                        <div class="testi-content">
-                        	<p class="t-name"><img src="imagess/star.png" width="75" height="12" alt="star" class="t-star"><strong class="semibold">Nisha P.,</strong> Ludhiana <span><img src="imagess/vry-img.png" width="12" height="14" alt="vry-img" class="vry-img">Verified Buyer</span></p>
-                            
-                            <p class="t-heading">"As a new mother, I was struggling with back pain due to the constant bending and lifting. This posture corrector has been a savior for me. It provides great support and has helped alleviate my back pain. I feel more confident and energetic to take care of my baby now."</p>	
-                        </div>		
-                    </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Smita G.,</strong> Pune
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I had tried various methods to improve my posture, but
+                    nothing seemed to work until I tried this posture corrector.
+                    It's comfortable to wear, and I've seen a visible
+                    improvement in my posture. It has become an essential part
+                    of my daily routine."
+                  </p>
                 </div>
+              </div>
             </div>
-			
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/loqwresblackmagneticposture-scaled.jpeg"
+                width="385"
+                height="383"
+                alt="s1-img5"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">5. Keeps Shoulders Straight</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/loqwresblackmagneticposture-scaled.jpeg"
+                width="385"
+                height="383"
+                alt="s1-img5"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                The corrector ensures your shoulders remain in the correct
+                position, preventing slumping and the associated discomfort.
+              </p>
+
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/kelly.mp4"
+                >
+                  <img
+                    src="imagess/46.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img10"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Sanjay R.,</strong> Ahmedabad
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I have always struggled with poor posture, which led to
+                    frequent backaches. Since using this posture corrector, I
+                    have noticed a remarkable improvement. It's easy to use and
+                    has helped me maintain a better posture throughout the day."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/img_11.jpg"
+                width="385"
+                height="383"
+                alt="s1-img6"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">
+                6. Improves Physical Appearance
+              </p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/img_11.jpg"
+                width="385"
+                height="383"
+                alt="s1-img6"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                Standing straight with proper posture not only makes you look
+                taller but also more confident and assertive.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/todd_j.mp4"
+                >
+                  <img
+                    src="imagess/45.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img5"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Anjali M.,</strong> Kolkata
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I work in a call center, which requires me to sit for long
+                    hours. This posture corrector has been a blessing for me. It
+                    provides excellent support and has helped alleviate my back
+                    pain. I feel more confident and comfortable at work now."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/61QSrEM2t2L._AC_UF894%2C1000_QL80_.jpg"
+                width="385"
+                height="383"
+                alt="s1-img7"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">7. Increases Self-Esteem</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/61QSrEM2t2L._AC_UF894%2C1000_QL80_.jpg"
+                width="385"
+                height="383"
+                alt="s1-img7"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                A good posture boosts your self-esteem and confidence, making
+                you feel more positive about yourself and your appearance.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/elizabeth_g.mp4"
+                >
+                  <img
+                    src="imagess/49.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img6"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Rahul D.,</strong> Hyderabad
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I lead a busy lifestyle, which often resulted in poor
+                    posture and back pain. This posture corrector has been a
+                    game-changer for me. It's comfortable to wear and has helped
+                    me maintain a better posture effortlessly. I highly
+                    recommend it to anyone looking to improve their posture."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/169151680_max.jpg"
+                width="385"
+                height="383"
+                alt="s1-img8"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">8. Versatile And Inclusive</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/169151680_max.jpg"
+                width="385"
+                height="383"
+                alt="s1-img8"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                Designed for both men and women of all ages, the corrector is
+                effective in treating conditions like scoliosis without any
+                contraindications.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/copper_d.mp4"
+                >
+                  <img
+                    src="imagess/48.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img7"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Meena L.,</strong> Chennai
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "After years of neglecting my posture, I started
+                    experiencing severe back pain. This posture corrector has
+                    been a lifesaver for me. It's easy to wear and has helped
+                    alleviate my back pain significantly. I feel more confident
+                    and healthy now."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/na-posture-corrector-belt-for-men-and-women-for-back-pain-back-original-imaghjxb9mzth9zf.webp"
+                width="385"
+                height="383"
+                alt="s1-img9"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">9. Comfortable And Discreet</p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/na-posture-corrector-belt-for-men-and-women-for-back-pain-back-original-imaghjxb9mzth9zf.webp"
+                width="385"
+                height="383"
+                alt="s1-img9"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                Made from elastic and durable materials, it fits perfectly to
+                your figure, allowing you to wear it under any clothing item
+                discreetly and comfortably.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/tracey_k"
+                >
+                  <img
+                    src="imagess/50.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img8"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Seema ,</strong> Jaipur
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "I have always been conscious of my posture, but due to long
+                    hours of sitting at work, it started deteriorating. This
+                    posture corrector has helped me maintain a better posture
+                    throughout the day. It's comfortable to wear and has become
+                    an essential part of my daily routine."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="s1-box">
+            <div class="s1-box-left hidemob">
+              <img
+                src="imagess/img-1.jpg"
+                width="385"
+                height="383"
+                alt="s1-img10"
+                class="s1-img"
+              />
+            </div>
+
+            <div class="s1-box-right">
+              <p class="s1-box-right-heading">
+                10. Affordable With Great Offers
+              </p>
+              <div class="clearall"></div>
+              <img
+                src="imagess/img-1.jpg"
+                width="385"
+                height="383"
+                alt="s1-img10"
+                class="s1-img formob"
+              />
+              <p class="s1-box-right-para">
+                Available at a discounted price of ₹1499 (originally ₹2998) and
+                with deals like "Buy 2 Get 1 Free" and "Buy 3 Get 3 Free," it's
+                an investment in your health that offers great value.
+              </p>
+              <div class="testi-box">
+                <div
+                  class="testi-imgbox ugc1"
+                  data-vdo="https://djunyrhp2z28m.cloudfront.net/assets/neverslouch.com/pl/topr-v1/imagess/ashleigh.mp4"
+                >
+                  <img
+                    src="imagess/47.jpg"
+                    width="104"
+                    height="104"
+                    alt="vdo-img9"
+                    class="vdoBtn"
+                  />
+                </div>
+                <div class="testi-content">
+                  <p class="t-name">
+                    <img
+                      src="imagess/star.png"
+                      width="75"
+                      height="12"
+                      alt="star"
+                      class="t-star"
+                    /><strong class="semibold">Nisha P.,</strong> Ludhiana
+                    <span
+                      ><img
+                        src="imagess/vry-img.png"
+                        width="12"
+                        height="14"
+                        alt="vry-img"
+                        class="vry-img"
+                      />Verified Buyer</span
+                    >
+                  </p>
+
+                  <p class="t-heading">
+                    "As a new mother, I was struggling with back pain due to the
+                    constant bending and lifting. This posture corrector has
+                    been a savior for me. It provides great support and has
+                    helped alleviate my back pain. I feel more confident and
+                    energetic to take care of my baby now."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-		 <div class="s1-box-out" style="text-align:left;margin-top:30px;">
-	  <p class="s1-box-right-heading">User Experiences</p>
-	  <ul class="smry-txt" style="float:none">
-	   <li>
-	    <strong>For Performers:</strong> Ideal for musicians and others who need to maintain posture for extended periods.
-	   </li>	
-	   <li>
-	    <strong>For Professionals:</strong> Drivers and office workers have found relief from chronic back pain and improved their posture significantly.
-	   </li> 
-	   <li>
-	    <strong>For Students:</strong> Helps correct posture affected by long hours of study and computer use, with visible results within a month.
-	   </li>
-	  </ul> 
-	  <!-- <p class="main-heading" style="margin-top:2rem;">FAQ Highlight: Magnetic Field Efficacy</p>
+
+        <div class="s1-box-out" style="text-align: left; margin-top: 30px">
+          <p class="s1-box-right-heading">User Experiences</p>
+          <ul class="smry-txt" style="float: none">
+            <li>
+              <strong>For Performers:</strong> Ideal for musicians and others
+              who need to maintain posture for extended periods.
+            </li>
+            <li>
+              <strong>For Professionals:</strong> Drivers and office workers
+              have found relief from chronic back pain and improved their
+              posture significantly.
+            </li>
+            <li>
+              <strong>For Students:</strong> Helps correct posture affected by
+              long hours of study and computer use, with visible results within
+              a month.
+            </li>
+          </ul>
+          <!-- <p class="main-heading" style="margin-top:2rem;">FAQ Highlight: Magnetic Field Efficacy</p>
 	  <p class="smry-txt"  style="float:none">Magnetic therapy, integral to the corrector, enhances blood circulation in the muscles, making them stronger and more resistant, effectively reducing back pain caused by muscle tension.
 	  </p>  -->
-	  <p class="s1-box-right-heading" style="margin-top:2rem;">How to Order</p>
-	  <p class="smry-txt" style="float:none">Don't miss the chance to improve your posture and health. With only 60 units left at these special prices, order your NeverSlouch: Magnetic Posture Corrector today and start experiencing the benefits of a healthy spine and a confident posture.</p>
-	  </div>
-	  
+          <p class="s1-box-right-heading" style="margin-top: 2rem">
+            How to Order
+          </p>
+          <p class="smry-txt" style="float: none">
+            Don't miss the chance to improve your posture and health. With only
+            60 units left at these special prices, order your NeverSlouch:
+            Magnetic Posture Corrector today and start experiencing the benefits
+            of a healthy spine and a confident posture.
+          </p>
+        </div>
+
         <div class="product-box">
-        	<div class="prod-left">
-            	<img src="imagess/61wvVKqeleL.webp" width="560" height="560" alt="product">
-            </div>
-            
-            <div class="prod-right"> 
-                <p class="prod-heading"><span>NeverSlouch: Magnetic Posture Corrector</span></p>
-                <p class="prod-para">This limited-time deal is in high demand and <br class="hidemob">in risk of selling out</p>
-                <div class="btn-box">
-                    <a class="prod-btn pl_ordernow_btns">Check Availability Now<img src="imagess/btn-arw.png" alt="btn-arw"></a> 	
-                    <p class="prod-offer-txt">Offer ends in: <span id="listicle-count2"></span></p>
-                    
-                    <div class="prod-strip">
-                    	<p>Sell-Out Risk: <strong class="red">High</strong> </p><div class="percent-box"><span style="width:10px;" class="to-fade"></span></div><p></p>
-                    </div>
-                    
-                    <ul class="prod-list">
-                    	<li>30-day money back guarantee</li>
-                        <li>Free Shipping!</li>
-                    </ul> 
-<img src="imagess/pg.png" style="display:block;width:350px;max-width:100%;margin:5px auto;">
-                    
+          <div class="prod-left">
+            <img
+              src="imagess/61wvVKqeleL.webp"
+              width="560"
+              height="560"
+              alt="product"
+            />
+          </div>
+
+          <div class="prod-right">
+            <p class="prod-heading">
+              <span>NeverSlouch: Magnetic Posture Corrector</span>
+            </p>
+            <p class="prod-para">
+              This limited-time deal is in high demand and
+              <br class="hidemob" />in risk of selling out
+            </p>
+            <div class="btn-box">
+              <a class="prod-btn pl_ordernow_btns"
+                >Check Availability Now<img
+                  src="imagess/btn-arw.png"
+                  alt="btn-arw"
+              /></a>
+              <p class="prod-offer-txt">
+                Offer ends in: <span id="listicle-count2"></span>
+              </p>
+
+              <div class="prod-strip">
+                <p>Sell-Out Risk: <strong class="red">High</strong></p>
+                <div class="percent-box">
+                  <span style="width: 10px" class="to-fade"></span>
                 </div>
+                <p></p>
+              </div>
+
+              <ul class="prod-list">
+                <li>30-day money back guarantee</li>
+                <li>Free Shipping!</li>
+              </ul>
+              <img
+                src="imagess/pg.png"
+                style="
+                  display: block;
+                  width: 350px;
+                  max-width: 100%;
+                  margin: 5px auto;
+                "
+              />
             </div>
+          </div>
         </div>
-		<div style="clear:both"></div>
-<p style="margin-top:20px;">This advertorial is designed to inform, engage, and motivate the audience to take action towards improving their posture and overall health with NeverSlouch: Magnetic Posture Corrector, highlighting the product's benefits, user experiences, and special offers.</p>
+        <div style="clear: both"></div>
+        <p style="margin-top: 20px">
+          This advertorial is designed to inform, engage, and motivate the
+          audience to take action towards improving their posture and overall
+          health with NeverSlouch: Magnetic Posture Corrector, highlighting the
+          product's benefits, user experiences, and special offers.
+        </p>
+      </div>
     </div>
-</div>
 
-<div class="stickey-mob formob" style="float:left; width:100%;">
-	<div id="cta-fixed-button" style="position:relative; display:none;">
-        <a class="prod-btn pl_ordernow_btns">Check Availability Now <img src="imagess/btn-arw.png" alt="btn-arw"></a> 	
+    <div class="stickey-mob formob" style="float: left; width: 100%">
+      <div id="cta-fixed-button" style="position: relative; display: none">
+        <a class="prod-btn pl_ordernow_btns"
+          >Check Availability Now <img src="imagess/btn-arw.png" alt="btn-arw"
+        /></a>
+      </div>
     </div>
-</div>
 
-<div class="footer">
-	<div class="container">
-     
-        
-        <p class="footer-txt two">Copyright © <script>document.write(new Date().getFullYear())</script>2024 VitalWiseLife. All Right Reserved.</p>
+    <div class="footer">
+      <div class="container">
+        <p class="footer-txt two">
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          2024 VitalWiseLife. All Right Reserved.
+        </p>
+      </div>
     </div>
-</div>
 
-
-<div class="ugc-modal">
-	<div class="video-container" id="myVdo" style="display:none;">
-    	<div class="ugc-close">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path></svg>
+    <div class="ugc-modal">
+      <div class="video-container" id="myVdo" style="display: none">
+        <div class="ugc-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="iconify iconify--ic"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
+            ></path>
+          </svg>
         </div>
-    	<video controls="" playsinline="" width="100%" height="auto">
-            <source src="#" type="video/mp4">
+        <video controls="" playsinline="" width="100%" height="auto">
+          <source src="#" type="video/mp4" />
         </video>
+      </div>
     </div>
-</div>
 
-<div class="modal_popup whitepapaerModal">
-	<div class="modal_body" style="display:none;">
-    	<a href="javascript:void(0);" class="modal_close">X</a>
-    	<iframe frameborder="0" class="whitepaper_doc" src="Dr_Chris.html#toolbar=1&amp;navpanes=0&amp;scrollbar=0"></iframe>
+    <div class="modal_popup whitepapaerModal">
+      <div class="modal_body" style="display: none">
+        <a href="javascript:void(0);" class="modal_close">X</a>
+        <iframe
+          frameborder="0"
+          class="whitepaper_doc"
+          src="https://google.com/"
+        ></iframe>
+      </div>
     </div>
-</div>
 
-<script type="text/javascript" src="jss/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-	var video = $('#myVdo video')[0];
-	
-	// $('.ugc1').click(function(e) {
-	// 	$('.ugc-modal').addClass('active');
-	// 	$('.video-container').show(); 
-		
-	// 	var videoFile = $(this).attr('data-vdo');
-	// 	video.src = videoFile;
-	// 	video.load();
-	// 	video.play();
-    // });
-	
-	$('.ugc-close, .ugc-modal').click(function(e) {
-       $('.ugc-modal').removeClass('active');
-	   $('.video-container').hide();
-	   video.pause(); 
-    });
-	
-	$('.openwhitepaper').click(function(e) {
-       $('.whitepapaerModal').addClass('active');
-	   $('.whitepapaerModal').find('.modal_body').show();
-    });
-	
-	$('.modal_close').click(function(e) {
-       $('.modal_popup').removeClass('active'); 
-	   $('.modal_body').hide();
-    });
+    <script type="text/javascript" src="jss/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var video = $("#myVdo video")[0];
 
-});
+        // $('.ugc1').click(function(e) {
+        // 	$('.ugc-modal').addClass('active');
+        // 	$('.video-container').show();
 
-	var countdown = document.getElementById("listicle-count");
-	var countdown2 = document.getElementById("listicle-count2");
-	setInterval(function() {
-	var toDate = new Date();
-	var tomorrow = new Date();
-	tomorrow.setHours(24, 0, 0, 0);
-	var diffMS = tomorrow.getTime() / 1000 - toDate.getTime() / 1000;
-	var diffHr = Math.floor(diffMS / 3600);
-	diffMS = diffMS - diffHr * 3600;
-	var diffMi = Math.floor(diffMS / 60);
-	diffMS = diffMS - diffMi * 60;
-	var diffS = Math.floor(diffMS);
-	var result = ((diffHr < 10) ? "0" + diffHr : diffHr);
-	result += ":" + ((diffMi < 10) ? "0" + diffMi : diffMi);
-	result += ":" + ((diffS < 10) ? "0" + diffS : diffS);
-	countdown.innerHTML = result;
-	countdown2.innerHTML = result;
-});
+        // 	var videoFile = $(this).attr('data-vdo');
+        // 	video.src = videoFile;
+        // 	video.load();
+        // 	video.play();
+        // });
 
-$(document).scroll(function() {
-		
-		var $elem = $('.stickey-mob');
-		var $window = $(window);
-	
-		var docViewTop = $window.scrollTop();
-		var docViewBottom = docViewTop + $window.height();
-	
-		var elemTop = $elem.offset().top;
-		var elemBottom = elemTop + $elem.height();
-	
-		if (elemTop >= (docViewBottom + 20) || (elemTop + $('#cta-fixed-button').height()) >= (docViewBottom + 134) ) {
-			$('#cta-fixed-button').css('position', 'fixed');
-		} else {
-			$('#cta-fixed-button').css({'position' : 'relative'});
-			
-		}
-		
-		var winscroll = $(window).scrollTop()
-	
-		var scrlbtn = $('.show-stickey').offset().top + 100;
+        $(".ugc-close, .ugc-modal").click(function (e) {
+          $(".ugc-modal").removeClass("active");
+          $(".video-container").hide();
+          video.pause();
+        });
 
-		if (winscroll > scrlbtn ){
-			$('#cta-fixed-button').fadeIn();
-		}else{
-			$('#cta-fixed-button').fadeOut();
-		}
-		
-	});
+        $(".openwhitepaper").click(function (e) {
+          $(".whitepapaerModal").addClass("active");
+          $(".whitepapaerModal").find(".modal_body").show();
+        });
 
-</script>
+        $(".modal_close").click(function (e) {
+          $(".modal_popup").removeClass("active");
+          $(".modal_body").hide();
+        });
+      });
 
+      var countdown = document.getElementById("listicle-count");
+      var countdown2 = document.getElementById("listicle-count2");
+      setInterval(function () {
+        var toDate = new Date();
+        var tomorrow = new Date();
+        tomorrow.setHours(24, 0, 0, 0);
+        var diffMS = tomorrow.getTime() / 1000 - toDate.getTime() / 1000;
+        var diffHr = Math.floor(diffMS / 3600);
+        diffMS = diffMS - diffHr * 3600;
+        var diffMi = Math.floor(diffMS / 60);
+        diffMS = diffMS - diffMi * 60;
+        var diffS = Math.floor(diffMS);
+        var result = diffHr < 10 ? "0" + diffHr : diffHr;
+        result += ":" + (diffMi < 10 ? "0" + diffMi : diffMi);
+        result += ":" + (diffS < 10 ? "0" + diffS : diffS);
+        countdown.innerHTML = result;
+        countdown2.innerHTML = result;
+      });
 
-<script type="text/javascript">
-	
-	$(document).scroll(function() {
-		
-		//bottom fixed button
-		var $elem = $('.stickey-mob');
-		var $window = $(window);
-	
-		var docViewTop = $window.scrollTop();
-		var docViewBottom = docViewTop + $window.height();
-	
-		var elemTop = $elem.offset().top;
-		var elemBottom = elemTop + $elem.height();
-	
-		if (elemTop >= (docViewBottom + 20) || (elemTop + $('#cta-fixed-button').height()) >= (docViewBottom + 134) ) {
-			$('#cta-fixed-button').css('position', 'fixed');
-		} else {
-			$('#cta-fixed-button').css({'position' : 'relative'});
-			
-		}
-		
-		var winscroll = $(window).scrollTop()
-	
-		var scrlbtn = $('.show-stickey').offset().top + 100;
+      $(document).scroll(function () {
+        var $elem = $(".stickey-mob");
+        var $window = $(window);
 
-		if (winscroll > scrlbtn ){
-			$('#cta-fixed-button').fadeIn();
-		}else{
-			$('#cta-fixed-button').fadeOut();
-		}
-		
-	});
-	
-</script>
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
 
- 
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
 
+        if (
+          elemTop >= docViewBottom + 20 ||
+          elemTop + $("#cta-fixed-button").height() >= docViewBottom + 134
+        ) {
+          $("#cta-fixed-button").css("position", "fixed");
+        } else {
+          $("#cta-fixed-button").css({ position: "relative" });
+        }
 
+        var winscroll = $(window).scrollTop();
 
-<script src="jss/660aa19d9f44f839120af2e6.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", (event) => {
-        document.querySelectorAll(".pl_ordernow_btns").forEach(function(elem){
-            elem.addEventListener("click",function(){
-                window.top.location = "https://track.vcommission.com/click?campaign_id=10873&pub_id=114616&url_id=7";
-            })
-        })
-    });
-</script>
-<!-- DEBUG-VIEW ENDED 2 APPPATH/Views/actions/pl/lander.php -->
-</body></html><!-- DEBUG-VIEW ENDED 1 APPPATH/Views/neverslouch.com/pl/topr-v1/index.php --><!-- DEBUG-VIEW START 2 APPPATH/Views/actions/pl/lander.php -->
+        var scrlbtn = $(".show-stickey").offset().top + 100;
+
+        if (winscroll > scrlbtn) {
+          $("#cta-fixed-button").fadeIn();
+        } else {
+          $("#cta-fixed-button").fadeOut();
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).scroll(function () {
+        //bottom fixed button
+        var $elem = $(".stickey-mob");
+        var $window = $(window);
+
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+
+        if (
+          elemTop >= docViewBottom + 20 ||
+          elemTop + $("#cta-fixed-button").height() >= docViewBottom + 134
+        ) {
+          $("#cta-fixed-button").css("position", "fixed");
+        } else {
+          $("#cta-fixed-button").css({ position: "relative" });
+        }
+
+        var winscroll = $(window).scrollTop();
+
+        var scrlbtn = $(".show-stickey").offset().top + 100;
+
+        if (winscroll > scrlbtn) {
+          $("#cta-fixed-button").fadeIn();
+        } else {
+          $("#cta-fixed-button").fadeOut();
+        }
+      });
+    </script>
+
+    <script src="jss/660aa19d9f44f839120af2e6.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".pl_ordernow_btns").forEach(function (elem) {
+          elem.addEventListener("click", function () {
+            window.top.location = "https://google.com/";
+          });
+        });
+      });
+    </script>
+    <!-- DEBUG-VIEW ENDED 2 APPPATH/Views/actions/pl/lander.php -->
+  </body>
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH/Views/neverslouch.com/pl/topr-v1/index.php --><!-- DEBUG-VIEW START 2 APPPATH/Views/actions/pl/lander.php -->
