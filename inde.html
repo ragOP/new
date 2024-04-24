@@ -2436,10 +2436,12 @@
         <div class="show-mob">
           <div id="ctabtn-mob" style="position: relative; padding: 15px 10px">
             <a
+            onclick="openPopup()"
             class="comn-btn pulse ckxpopup-open"
             ckxvariantid="43214004945091"
             >
               <div>
+
                 Order Now @ 2,499s
                 <img
                   src="images/btn-arw.png"
@@ -2487,6 +2489,23 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.accordion.js"></script>
     <script src="js/wow.min.js"></script>
+    <script>
+      function openPopup() {
+        // Set the dimensions for the popup window
+        var width = 800;
+        var height = 600;
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        
+        // Open a new window with Google loaded inside it
+        var popupWindow = window.open('https://www.google.com', 'GooglePopup', 'width=' + width + ', height=' + height + ', left=' + left + ', top=' + top);
+        
+        // Focus on the new window
+        if (window.focus) {
+          popupWindow.focus();
+        }
+      }
+      </script>
     <script>
       $(document).ready(function () {
         new WOW().init();
@@ -2561,7 +2580,7 @@
       });
     </script>
 
-    <script src="js/661d04899f44f839120af2f0.js"></script>
+    <!-- <script src="js/661d04899f44f839120af2f0.js"></script> -->
     <script>
       document
         .querySelectorAll("input[name='header_pack']")
